@@ -29,7 +29,7 @@ p
 	clear both
 	width 100%	
 	margin 1rem 0 
-	padding 0 
+	padding 0 10px
 
 #header
 	width 100%
@@ -64,20 +64,20 @@ p
 .article
 	margin 10px 0 36px 0
 	padding 0
-.article-header
-	padding 0 
-	text-align left
-	& time
-		font-size 14px
-		
-.article-title
-	margin 16px 0 12px 
-	font-size 24px
-.article-excerpt
-	margin 1.5rem 0 0 0
-	padding 0
-	& p
-		margin 12px 0		
+	&>.article-header
+		margin 0
+		padding 0 
+		text-align left
+		& time
+			font-size 14px
+	&>.article-title
+		margin 12px 0 
+		font-size 22px
+	&>.article-excerpt
+		margin 1.5rem 0 0 0
+		padding 0
+		& p
+			margin 12px 0		
 
       
 
@@ -99,14 +99,15 @@ p
 //archive							
 
 .archive-item
-	padding .5rem .5rem 1rem .5rem 
-.archive-time		
-	position  static		   
-.archive-title
-	display block
-	margin 1rem 0 
-	& a
-		font-size 1.1rem
+	padding .5rem 0
+	&>.archive-time		
+		width 30%
+	&>.archive-title
+		width 70%
+		display block
+		margin 1rem 0 
+		& a
+			font-size 1.1rem
 
 .cate-inner
 	margin 0 .5rem 1rem 
