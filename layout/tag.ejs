@@ -1,0 +1,26 @@
+<section>
+  <% if( is_tag()){ %>
+
+      <span  class="page-title"><%= "# " + page.tag %></span>   
+        
+        <% page.posts.each(function (post) { %>     
+
+            <%- partial('_partial/item',{post: post}) %>       
+
+        <% })%>
+
+    <%} else {%>    
+      
+        <span class="page-title"><%=  __('Page.Tags') %></span> 
+        
+        <% site.tags.sort('date',-1).each( function (tag){%>
+            
+            <a class="tag-wrap slideDownMin" href="<%- url_for(tag.path) %>">    
+               <span class="iconfont icon-tag-inner"></span>           
+               <span class="tag-name"> <%- tag.name %> </span>
+               <span class="tag-count"><%- tag.length %></span>  
+             </a>
+        <% })%>
+
+    <%}%>
+</section>

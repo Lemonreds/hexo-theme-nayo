@@ -1,0 +1,11 @@
+
+<% if (post.photos && post.photos.length){ %>
+	
+	<div class="gallery-thumb">
+		<% for( i in post.photos){%>
+			<div class="gallery" 	
+			src="<%- url_for(post.photos[i]) %>" 
+			data-origin="<%- url_for(post.photos[i])%>"></div>
+		<%}%>  
+	</div>
+<%}%>

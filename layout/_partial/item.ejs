@@ -1,0 +1,13 @@
+<% if(post) {%>	
+
+	   <% var  date_format = config.date_format  %>
+
+	   <article class="item slideDownMin">   	
+
+        <time class="item-date"> <%= date(post.date, date_format || 'MMM Do, YYYY' ) %></time>    
+
+        <a class="item-title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
+
+      </article>
+
+<% } %>

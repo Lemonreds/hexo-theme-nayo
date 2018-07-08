@@ -1,0 +1,22 @@
+<div class="post-header">
+
+	<p class="post-title">	
+		<%= page.title|| __('Untitled') %>
+	</p>
+			
+
+	<div class="meta-info">	
+	<span>
+		<%= date(page.date,  "MMM DD, YYYY") %>
+	</span>
+
+	<%  var length = raw_length(post.content) %>
+	<% if ( length > 0 ){%>
+		<i class="iconfont icon-words"></i>
+		<span>
+			<%= length %>
+		</span>
+	<% }%>
+</div>
+
+</div>

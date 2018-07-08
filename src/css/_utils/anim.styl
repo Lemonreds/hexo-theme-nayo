@@ -1,0 +1,167 @@
+
+@keyframes fadeIn{
+    from{
+      opacity 0     
+    }
+    to{
+      opacity 1        
+    }
+}
+
+.fadeIn 
+  animation-fill-mode forwards
+  animation-name fadeIn
+  animation-duration 1.2s  
+
+
+@keyframes slideUp{
+    0%{   
+    transform translateY(0)
+    }
+   100%{   
+    transform translateY(-100px)
+   }
+}    
+
+
+.slideUp
+  animation-fill-mode: forwards
+  animation-name: slideUp
+  animation-duration:  .5s  
+  
+
+
+
+@keyframes slideDown{
+    0%{   
+    transform:translateY(-100px)   
+  }
+    100%{
+    transform:translateY(0) 
+  }
+}
+
+.slideDown
+  animation-fill-mode: forwards
+  animation-name: slideDown
+  animation-duration:  .5s  
+ 
+  
+
+@keyframes slideDownMin{
+    0%{    
+    transform:translateY(-30px)   
+    opacity 0
+  }
+    100%{
+    transform:translateY(0) 
+    opacity 1
+  }
+}
+
+
+.slideDownMin
+  animation-fill-mode: forwards
+  animation-name: slideDownMin
+  animation-duration:  .4s  
+ 
+
+
+
+@keyframes sildeUpMin{
+    0%{    
+    transform translateY(30px)   
+    opacity 0
+  }
+    100%{   
+    transform translateY(0) 
+    opacity 1
+  }
+}
+
+
+.sildeUpMin
+  animation-fill-mode: forwards
+  animation-name: sildeUpMin
+  animation-duration:  .4s  
+  
+
+@keyframes menuSlideIn{
+    0%{   
+    transform: translateX(-200px)      
+  }
+    100%{
+    transform: translateX(0) 
+  }
+}
+
+.menuSlideIn
+  animation-fill-mode: forwards
+  animation-name: menuSlideIn
+  animation-duration:  .5s  
+
+
+
+@keyframes menuSlideOut{
+    0%{   
+    transform: translateX(0)       
+  }
+    100%{   
+    transform: translateX(-200px)  
+  }
+}
+.menuSlideOut
+  animation-fill-mode: forwards
+  animation-name: menuSlideOut
+  animation-duration:  .4s  
+ 
+
+@keyframes scrollIn{
+  from {
+  transform: translateY(50px);
+  opacity: 0;
+  }
+  to {
+  transform: translateY(0px);
+  opacity: 1;
+  }
+}
+
+.scrollIn
+  animation-fill-mode: forwards
+  animation-name: scrollIn
+  animation-duration: .6s  
+
+
+@keyframes leftIn{
+  from {
+  transform translateX(100px)
+  opacity 0
+  }
+  to {
+  transform translateX(0px)
+  opacity 1
+  }
+}
+
+.leftIn
+  animation-fill-mode forwards
+  animation-name leftIn
+  animation-duration .8s
+
+
+@keyframes rightOut{
+  from {
+  transform translateX(0px)  
+  opacity 1
+  }
+  to {
+  transform translateX(100px)
+  opacity 0
+  }
+}
+
+.rightOut
+  animation-fill-mode forwards
+  animation-name rightOut
+  animation-duration .8s

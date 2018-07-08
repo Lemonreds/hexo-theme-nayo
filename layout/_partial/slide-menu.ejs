@@ -1,0 +1,18 @@
+ <div class="mobile-menu">      
+
+      <% if ( theme.favicon){ %>
+      <img class="mobile-menu-icon" src= "<%- theme.favicon %>" >   
+      <% } %>
+
+      <% for (var i in theme.menu){ %>   
+            <% if ( i  == 'search' ){%>              
+
+            <a class="mobile-menu-link mobile-menu-search" href="#"><%=__('Menu.search')%> </a>                 
+            <% } else {%>
+
+            <a class="mobile-menu-link" href="<%- url_for(theme.menu[i]) %>"><%= __('Menu.'+i) %>
+            </a>
+            <% } %>
+      <% } %>   
+      
+</div>

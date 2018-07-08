@@ -1,0 +1,146 @@
+
+
+@import '../_import/valine.styl'
+
+.post-header
+  position relative 
+  margin-top 3rem 
+  padding 10px 0 
+  border-bottom 1px solid $line-clr 
+  & > .post-title 
+    font-size 2rem 
+    margin 0 0 1rem
+    color rgba(0,0,0,.9) 
+  & > .meta-info
+    & > span
+      margin-right 12px
+
+.post-content
+  min-height 18vh
+  margin 1rem 0 2rem  
+    
+//
+// button
+//
+.donate-btn,.share-btn 
+  cursor pointer
+  margin 0 14px
+  &:hover
+      color $thr-clr
+//-------------donate
+#donate-box  
+  fixed-center(460px,400px)  
+  display none  
+  padding 20px 0
+  text-align center
+  border-radius: 10px   
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.05) 
+.donate-cancel
+  position absolute
+  top 12px
+  right 24px
+  width 12px  
+  font-size 18px
+.donate-img-box
+  width 260px
+  margin 0 auto
+.donate-img
+  margin-top 0
+.donate-word
+  display inline-block 
+  font-weight 300 
+  font-size .9rem
+.donate-list 
+  height auto
+  overflow hidden
+//----- donate js
+.donate-active
+  color $thr-clr
+//-------------share
+.-mob-share 
+  fixed-center(340px,240px)  
+  display none    
+  padding 20px 0   
+  text-align center
+  border-radius: 10px   
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.05)
+.-mob-share a 
+  padding 4px
+  font-size 1.28rem 
+  display inline-block
+  min-width 80px   
+  padding 4px 6px
+  margin 4px 
+  border-radius 4px
+  cursor pointer
+  &:hover
+    color $thr-clr 
+.-mob-share-weixin-qrcode-bg    
+   background-color rgba(0,0,0,.13) !important 
+.-mob-share-weixin-qrcode-content
+   border 1px solid $line-clr !important
+
+.post-meta
+  margin 5rem 0 1rem
+  & > a
+      @extend $item
+    
+.post-footer
+  width 100%
+  height 160px
+  position relative
+  border .5px solid  $line-clr
+  border-radius 4px
+  display flex 
+  justify-content space-between 
+  align-items center
+  padding 20px 11px
+  margin-bottom 4rem 
+  margin-bttom 8rem
+  text-align right 
+  box-sizing content-box
+  & > div
+    width 50%
+    height 100%   
+
+.pf-avatar
+	width 90px
+	height 90px
+	padding 1px
+	border 1px solid $line-clr  
+	border-radius 50%  
+	box-shadow 0 2px 2px rgba(0,0,0,0.06)	 
+
+.pf-left
+  text-align center
+  & >.pf-des
+    color rgba(0,0,0,.65)
+    font-size .95rem
+    overflow hidden
+  & >.pf-avatar
+    width 90px
+    height 90px
+    padding 1px
+    border 1px solid $line-clr  
+    border-radius 50%  
+    box-shadow 0 2px 2px rgba(0,0,0,0.06)	 
+
+
+.pf-right
+  display flex 
+  flex-direction column 
+  & > div,& > nav
+    width 100%
+    height 50% 
+  &>.pf-paginator
+    display flex
+    justify-content center
+    align-items flex-end
+    & a
+      @extend $tips
+      @extend $fade
+      border-radius 4px 
+      padding 6px 12px 
+      border 1px solid $line-clr
+      margin 0 6px  
+      font-size 16px

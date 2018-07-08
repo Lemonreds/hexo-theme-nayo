@@ -1,0 +1,31 @@
+Menu:
+  home: 首頁
+  categories: 分類
+  tags: 標籤
+  archives: 歸檔
+  about: 關於
+  search: 搜索
+Page:
+  Archives: 歸檔
+  Categories: 分類
+  Tags: 標籤
+  About: 關於
+
+Post: 
+  Donate: 讚賞
+  Share: 分享
+  Prev: 上一篇
+  Next: 下一篇
+  
+Paginator: 
+  Prev: 上一頁
+  Next: 下一頁
+
+Contents: 目錄
+ReadMore: 閱讀更多
+Untitled: 無標題
+ 
+Search:
+  Sidebar_words: 搜索
+  input_words: 输入你想搜索的
+

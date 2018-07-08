@@ -1,0 +1,32 @@
+Menu:
+  home: Home
+  categories: Categories
+  tags: Tags
+  archives: Archives
+  about: About
+  search: Search
+Page:
+  Archives: Archives
+  Categories: Categories
+  Tags: Tags
+  About: About
+
+Post:
+  Donate: Donate
+  Share: Share
+  Prev: Prev
+  Next: Next
+  
+  
+Paginator: 
+  Prev: Prev
+  Next: Next
+
+
+Contents: Contents
+ReadMore: Continue
+Untitled: Untitled
+
+Search:
+  Sidebar_words: Search
+  input_words: Typing Something here.

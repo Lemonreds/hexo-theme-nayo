@@ -1,0 +1,25 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+  <%
+    var title = titlecase(page.title);
+
+    if (is_archive()){
+      title = __('Page.Archives');   
+    } else if (is_category()){
+      title = __('Page.Categories') + ': ' + page.category;
+    } else if (is_tag()){
+      title = __('Page.Tags') + ': ' + page.tag;
+  }
+  %>
+  
+  <title><% if (title){ %>  <%= title %> | <% } %>  <%= theme.title || config.title %> </title>
+
+ 
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- url_for(  theme.favicon ) %>">
+  <% } %>
+
+
+  <%- css('nayo.min') %> 
+</head>

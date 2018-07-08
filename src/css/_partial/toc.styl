@@ -1,0 +1,32 @@
+    
+.sidebar
+    display none
+    padding 1.8em 0    
+    position absolute
+    width 250px   
+    height 100%
+    top 18%
+    left 79%     
+    overflow hidden	
+    @media mq-mobile 
+      display none
+	&>.toc-title
+		display block
+		text-align center 		
+		font-size 1rem
+		color rgba(0,0,0,.5)
+		cursor pointer	
+		&:hover		
+			color $thr-clr 
+
+
+//----------js
+.toc-fixed	
+	position fixed 
+	top 2%
+	left 79%	
+	height 86%
+	
+.toc-active		
+	color $thr-clr 		
+	

@@ -1,0 +1,50 @@
+
+<div class="post-meta">
+      <% if( page.categories && page.categories.length > 0 ) {%>
+        <i class="iconfont icon-category"></i>       
+        <%-  list_categories( page.categories ,{
+          show_count:false,
+          style:'none',
+          separator:" "    
+        }) %> 	
+     
+      <% }%>	
+
+      <% if( page.tags &&  page.tags.length > 0 ) {%>
+        <i class="iconfont icon-tag"></i>     
+          <%- list_tags( page.tags ,{
+          show_count:false,
+          style:'none',
+          separator:" "      
+          }) %>    
+      <% }%>	
+</div>
+
+
+
+<% var profile = theme.profile %>
+
+<div class="post-footer">
+  <div class="pf-left">
+      <img class="pf-avatar" src="<%- url_for(profile.avatar) %>">
+      <p class="pf-des"><%= profile.description || profile.author || config.author %></p>
+  </div>
+
+  <div class="pf-right">           
+      <div class="pf-links">
+        <%- partial('_partial/_post/donate') %> 
+        <%- partial('_partial/_post/mob_share') %>
+      </div>  
+    <nav class="pf-paginator">
+      <% if (page.prev) { %>
+        <% var title = truncate(page.prev.title , {length:60}) %> 
+          <a href="<%- url_for(page.prev.path) %>" data-hover="<%= title ||  __('Untitled') %>"><%= __('Post.Prev') %></a>      
+       <% } %>     
+        
+      <% if (page.next) { %>
+        <% var title = truncate(page.next.title, {length:60}) %>
+        <a href="<%- url_for(page.next.path) %>" data-hover="<%= title ||  __('Untitled') %>"> <%=__('Post.Next')%></a>
+      <% } %>      
+  </nav>   
+  </div>
+</div>

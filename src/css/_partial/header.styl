@@ -1,0 +1,80 @@
+.header
+  width 100%
+
+.header-nav   
+  margin 0 auto  
+  max-width 58%
+  height 4rem
+  line-height 4rem  
+  display flex  
+  align-items center
+  justify-content flex-end
+           
+.header-menu
+    display flex
+    justify-content flex-end
+    white-space nowrap  
+    
+.header-menu-link  
+    @extend $oneline    
+    margin 0 .85rem 
+    font-size .9rem
+    display inline-block 
+    letter-spacing 1px 
+    
+//---------js  
+.header-static
+  position static
+  background-color $bgr
+.header-fixed
+  position fixed
+  z-index 999
+  top 0
+  left 0
+  opacity .8
+  background-color $bgr
+  transition all .6s   
+.header-menu-active  
+  color $thr-clr !important   
+.header-title
+  font-size 1.4rem
+
+
+
+.slide-right
+	transform translateX(200px)
+	transition 0.5s
+.slide-left
+	transform translateX(0px)
+	transition 0.5s
+	
+.mobile-toggle
+	display none
+	position relative 
+	float left  
+	margin-left 12px
+
+.mobile-menu
+	display none
+	position fixed
+	left 0
+	top 0    
+	width 200px
+	height 100%
+	background-color $bgr
+	z-index 999  
+	padding-top 46px
+	text-align center
+
+.mobile-menu-link 
+	display block
+	padding 18px 16px
+	line-height 1
+
+
+.mobile-menu-icon 
+	margin 30px auto
+	width 40px     
+	padding 4px
+	border 1px solid $line-clr
+	border-radius 5px

@@ -1,0 +1,13 @@
+<section>
+
+  <% if( is_category()){ %>
+
+  	<span class="page-title"><%=  "# "+ page.category %></span>
+
+  	 <% page.posts.each(function (post) { %>  
+
+        <%- partial('_partial/item',{post:post}) %>       
+
+  	 <% }) %> 	
+  <%}%>	    
+</section>

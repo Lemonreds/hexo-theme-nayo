@@ -1,0 +1,89 @@
+.article 
+    opacity 0
+    margin-bottom 48px
+    padding 14px 0  
+    &:after
+        content ""
+        position absolute
+        left 1%
+        bottom -16px
+        width 98%
+        height 1px
+        background-color $line-shallow-clr 
+    &  .article-header    
+        padding 1rem 1.5rem 0 
+        & span
+            color rgba(0,0,0,0.7)  
+            font-size .825rem     
+        & .article-title
+            display block    
+            font-size 1.75rem      
+        & .article-meta  
+            display flex
+            height 50px 
+            align-items center
+            font-size 0.75rem
+            & > span
+                display inline-block
+                padding 8px 6px           
+            & > .article-tag        
+                @extend $item   
+                font-size 0.75rem  
+    & .article-excerpt
+        margin 1rem 1.2rem    
+    & .article-bottom
+        text-align center
+        margin 4rem auto 0 auto
+        height 44px         
+        & .article-readmore  
+            @extend $fade        
+            font-size .85rem      
+            padding 8px 12px 
+            border-radius 40px
+            border 1px solid $line-clr
+            box-sizing content-box
+            text-align center
+  
+
+.thumb
+    margin 0 .8rem  
+    display flex   
+    @media mq-mobile 
+      flex-wrap wrap
+      margin .5rem
+
+.banner    
+    position relative
+    left -1%   
+    width 102%
+    height 22.5rem  
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+    border-radius 3px
+    @media mq-mobile 
+      width 100%
+      max-height 12rem
+  
+.gallery-thumb 
+    margin 0 .8rem  
+    display flex   
+    @media mq-mobile 
+      flex-wrap wrap
+      margin .5rem
+      
+.gallery  
+    border-radius 2px    
+    box-sizing border-box
+    width 25%
+    margin 0 .1rem   
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+    &:before 
+        content ""
+        display inline-block
+        padding-bottom 100%
+    @media mq-mobile
+      width 45%
+      margin-bottom .1rem  

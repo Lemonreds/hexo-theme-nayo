@@ -1,0 +1,29 @@
+<article class="post">
+  
+	<%- partial('_partial/_post/header',{post: page}) %> 
+	<%- partial('_partial/_post/mathjax',{post: page}) %> 
+
+	  <div class="post-content slideDownMin">
+
+		<% if (page.banner){ %>
+			
+				<div class="banner" 
+				src="<%- url_for(page.banner) %>" 
+				style="background-image:url(<%- url_for(page.banner) %>)"> </div>	
+
+		<% } else if (page.photos && page.photos.length){ %> 	
+				<%- partial('_partial/_post/gallery',{post:page}) %>			
+		<%}%>
+
+			<% if (page.excerpt && page.excerpt_ignore){ %>
+					<%- page.more %>  					
+			<%} else{%>
+					<%- page.content %>  	
+			<%}%>		
+	  </div>     
+	  
+
+	<%- partial('_partial/_post/footer',{post: page}) %> 
+	<%- partial('_partial/_post/comment') %>	
+</article>
+<%- partial('_partial/_post/toc',{post:page}) %>

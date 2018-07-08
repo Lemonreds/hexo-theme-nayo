@@ -1,0 +1,42 @@
+<%# post%>
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
+		<a  class="article-title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled') %></a>  
+	       
+		 <%	var date_format = config.date_format %>
+
+		<div class='article-meta'>
+			<%= date(post.date,  "MMM DD, YYYY") %>
+			<%if(post.tags && post.tags.length){%>
+				<span class="iconfont icon-star"></span>
+				<% post.tags.sort('date',-1).each(function (tag){%>            
+						<a class="article-tag" href="<%- url_for(tag.path) %>"><%- tag.name %></a>           
+				<% })%>
+			<%}%>
+		</div>
+	</div>
+
+
+	<% if (post.banner){ %>
+		<div class="thumb">
+			<div class="banner"  data-origin="<%- url_for(post.banner) %>"></div>
+		</div>
+	<% } %>
+
+    
+	<div class="article-excerpt">	
+		<% if (post.excerpt) { %>
+			<%- post.excerpt %>
+		<% } else { %> 
+			<%- post.content %>
+		<%}%>  	  
+	</div>
+
+	<div class='article-bottom'>
+		<a class="article-readmore" href="<%- url_for(post.path) %>"><%= __('ReadMore') %></a> 	
+	</div>	
+    
+</article>

@@ -1,0 +1,57 @@
+//
+// tag 
+//
+.tag-wrap	
+	@extend $tags  
+	display inline-block		
+	margin .4rem .3rem 	
+	padding  2px 12px	
+	&>.tag-name
+		font-size 0.9rem
+	&>.tag-count
+		font-size 0.825rem
+
+//
+// archive
+//
+.archive-part	
+	margin 1.5rem 1rem 0 		
+	text-align right	
+	& >.archive-part-item
+		border 1px solid $line-clr
+		padding 6px 7px
+		border-radius 3px
+		font-size 0.825rem
+		color rgba(0,0,0,0.65)
+		cursor pointer
+		transition all .2s ease-in-out
+		&:hover
+			border 1px solid $thr-clr
+			color $thr-clr
+
+	
+.archive-item			
+	display flex
+	position relative
+	align-items center
+	padding 8px 60px
+	&:after
+		content ""
+		position absolute
+		left 10%
+		bottom 0
+		width 80%
+		height 1px
+		background-color $line-shallow-clr
+	&>.archive-time
+		width 40%
+		font-size 0.825rem
+		color rgba(0,0,0,.65)
+		text-align center
+		margin 10px 0
+	&>.archive-title
+		width 60%
+		font-size 1.05rem
+		display inline-block
+		text-align left
+		margin 14px 0

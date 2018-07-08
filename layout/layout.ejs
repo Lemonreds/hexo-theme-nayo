@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <%- partial('_partial/head') %>  
+  <body>   
+    
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>   
+
+      <div class="container">       
+          
+          <% if (is_post() || is_home()) { %>
+            <section class="main">  
+          <% } else{ %>
+            <section class="main slideDownMin">
+          <% }%>
+
+          <%-body%>
+          </section> 
+      </div>            
+    
+    <a id="backTop">
+      <span>
+        <i class="iconfont icon-backtotop"></i>
+      </span>
+    </a> 
+
+  
+    <%- partial('_partial/search-container') %>
+    <%- partial('_partial/slide-menu') %>        
+    <%- partial('_partial/after-footer') %>     
+    <%- partial('_partial/footer') %>   
+
+  
+
+    <%- js('nayo.bundle')%>           
+  </body>        
+</html>

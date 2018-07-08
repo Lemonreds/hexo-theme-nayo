@@ -1,0 +1,115 @@
+# header nav
+# 菜单路径
+menu:
+  home: /
+  archives: archives
+  tags: tags
+  about: about
+  search: search
+
+# site title 
+# 页面的标题
+# title为空时 Hexo/_config.yml 配置有效
+title: hexo-theme-nayo
+
+# author profile
+# source/imgaes/
+# 作者信息
+# author为空时 Hexo/_config.yml 配置有效
+profile: 
+  author: Lemon
+  avatar: /images/header.jpg  
+  description: hi,i am lemon
+
+# site favicon
+# source/imgaes/
+# 站点图标
+favicon: /images/favicon.png
+
+# social link
+social:  
+  Github: https://github.com/Lemonreds/hexo-theme-nayo 
+  Weibo:
+# Zhihu:
+  Facebook:
+  Twitter:
+  Instagram:
+  LinkedIn:
+
+
+# toc
+# 文章的目录 
+toc:
+    false
+
+# site analytics 
+# 站点访问统计
+# [ analytics id ]
+baidu_analytics:
+ 636802045446222199ae541e32c8133e 
+google_analytics: 
+
+# comment
+
+# disqus(https://disqus.com/)
+disqus:
+  comment: true
+  shortname: lemonreds
+
+# valine(https://github.com/xCss/Valine)
+# 创建 leancloud 应用 获取 id|key 填入即可
+leancloud:  
+  comment: false
+  app_id: cFM0eCo0CQ9xmBXmHi1eltol-gzGzoHsz
+  app_key: oh9tizsnvV2vNvWgqEvoNtQO
+
+# mob share(http://www.mob.com)
+# 文章分享功能
+mob_share:
+  true
+
+share_item:
+- qq
+- weixin
+- weibo
+- douban
+- facebook
+- twitter
+#- tumblr
+- google
+
+
+# donate
+# 捐赠功能
+# source/imgaes/
+donate:
+  enable: true
+  word: 世界美好 你也是
+  wechat: /images/donate1.png
+  alipay: /images/donate2.png
+
+# mathjax 
+# 渲染LateX公式
+# 在post文章头部添加:
+#   mathjax: true
+# 即可在当前post开启mathjax
+mathjax:
+  enable: true
+  
+# excerpt_ignore [boolean]
+# increase at the top of your article
+# Does this article need to hide the excerpt ?
+# 在文章头部中增加此配置 
+# 文章是否需要显示摘要 默认为显示
+
+# footer
+# 底部信息
+footer:
+  author: Lemon
+  since: 2017
+
+
+# theme version
+#
+version:
+  0.3.0

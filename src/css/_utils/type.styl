@@ -1,0 +1,100 @@
+// 文章排版
+
+
+h1,h2,h3,h4,h5,h6   
+    color #111
+    word-spacing 0.5px   
+    font-weight 300  
+
+h1
+  margin 1.4em 0
+  font-size 26px   
+h2  
+  margin 1.3em 0
+  font-size 23px
+h3
+  margin 1.3em 0
+  font-size 23px
+    
+h4,h5,h6
+  margin 1.2em 0
+  font-size 18px 
+
+.post-content  p ,.article-excerpt p
+   font-weight 300   
+   margin 1em 0
+   line-height 2
+   font-size 0.88rem  
+   
+strong
+   font-weight 500   
+   
+blockquote
+  display block
+  letter-spacing .4px
+  font-size 15px
+  padding 0 12px
+  margin 2rem 0 
+ 
+blockquote p  
+  margin  0
+  padding-left 10px
+  border-left 3px solid #eee
+  
+hr
+  margin 1em 0
+  opacity .2
+  border .2px solid $line-clr
+ul,ol
+  margin-left 22px
+  padding-left 0px
+ul p , ol p 
+  margin 0
+
+li
+  font-size 15px  
+  margin 8px 0 
+  list-style-type none
+  position relative
+  &:before
+    position absolute
+    left -12px
+    top 0
+    content " "
+    width 2px
+    height 2px
+
+table 
+  border-collapse collapse
+  border-spacing 0
+  font-size 14px
+  margin 28px 0
+ 
+    
+th
+  font-size 14px  
+  
+th,td
+  border 1px solid #ddd
+  padding .4rem 1rem
+  font-weight 300
+  margin 28px 0
+
+.article-excerpt 
+  & h1,& h2,& h3,& h4,& h5,& h6
+    margin .8em 0 
+  & p
+    margin 0 0 .8em
+
+.article-excerpt,.post-content
+  & a
+    font-size 0.9rem
+    color $thr-clr !important  
+    text-decoration: underline
+    font-family: 'Arial'
+    &:hover    
+       color $sub-clr !important  
+
+.post-content
+  & img 
+    margin 1.2em 0 

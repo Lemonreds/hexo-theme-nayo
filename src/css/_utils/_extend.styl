@@ -1,0 +1,76 @@
+$oneline
+  text-overflow ellipsis
+  overflow hidden
+  white-space nowrap
+  
+$tags
+  margin 3px 2px
+  padding 0.5rem 0.825rem
+  display inline-block
+  line-height 1.825rem
+  font-size 0.825rem
+  border 1px solid  $tag-border 
+  border-radius 999em 
+  transition all .2s ease
+  &:visited,&:active,&:link
+    color $black 
+  &:hover
+    background rgba(255,255,255,.2)
+    color $thr-clr
+    border 1px solid $thr-clr    
+   
+$fade  
+   &:hover
+      border 1px solid rgba($thr-clr,.5)
+        
+$item
+    @extend $fade 
+    display inline-block 
+    padding 3px 6px
+    border 1px solid  $line-clr
+    border-radius 4px
+    background rgba(255,255,255,.3) 
+    margin 0 3px 0
+    font-size .825rem
+
+
+$tips
+  position relative 
+  &:hover:before,&:hover:after  
+    position absolute  
+    animation-fill-mode forwards
+    animation-name tipsAnimation
+    animation-duration .2s 
+  &:hover:before
+    content ' '
+    border 8px solid transparent
+    border-top 8px solid #565656 
+    top -30% 
+    left 50%
+    margin-left -4px
+    margin-top -2px
+    width 0
+    height 0
+  &:hover:after    
+    content attr(data-hover) 
+    bottom 130% 
+    left 50%
+    padding 8px 6px
+    width 160px
+    margin-left -80px
+    font-size 16.5px
+    box-sizing border-box
+    color #ffff !important
+    background #40484a
+    text-shadow 0 -1px 0 rgba(0,0,0,1)    
+    border-radius 4px 
+    text-align center
+
+   
+@keyframes tipsAnimation
+    0%
+        transform translateY(10px) 
+        opacity .8 
+    100%
+        transform translateY(-4px) 
+        opacity 1

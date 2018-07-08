@@ -1,0 +1,23 @@
+
+
+<% var since = theme.footer.since %>
+<% var year = date(new Date(), 'YYYY') %>
+
+<footer id="footer">	    
+
+		
+		<div class="footer-copyright">
+		&copy;
+		<% if (since < year){%>		
+		<%= since %>-
+		<% }%>
+		<%= year %>		
+	
+		<%= theme.footer.author || theme.profile.author || config.author %>
+		<br/>
+
+		Theme By
+		<a href="https://github.com/Lemonreds/hexo-theme-Nayo" target="_blank">Nayo</a>	
+		</div>			
+	 
+</footer>

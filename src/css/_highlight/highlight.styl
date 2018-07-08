@@ -1,0 +1,244 @@
+@import "theme"
+
+$code-block {
+  overflow: auto;
+  margin: 20px 0;
+  padding: 0;
+  font-size $code-font-size;
+  color: $highlight-foreground;
+  background: $highlight-background;   
+}
+pre, code { 
+  font-family: $code-font-family; 
+}
+
+code {
+  padding: 2px 4px;
+  word-wrap: break-word;  
+  font-size $code-font-size;
+}
+
+pre {
+  @extend $code-block;
+  padding: 10px;
+
+  code {
+    padding: 0;
+    color: $highlight-foreground;
+    background: none;
+    text-shadow: none;
+    
+  }
+}
+
+
+.highlight {
+  @extend $code-block;
+  border-radius: 6px;
+  position relative;
+  text-shadow 1px 2px 1px rgba(0,0,0,0.009)
+  box-shadow 0 1px 2px rgba(0,0,0,0.05)
+
+  pre {
+    border: none;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  table {
+    margin: 0;
+    width: auto;
+    border: none;
+
+  }   
+
+  td {
+    border: none; 
+    padding: 0;
+  }
+
+  figcaption {
+    clearfix();
+    font-size: 1em;
+    color: $highlight-foreground;
+    line-height: 1em;
+    margin-bottom: 1em;
+
+    a {
+      float: right;
+      color: $highlight-foreground;
+
+      &:hover { border-bottom-color: $highlight-foreground; }
+    }
+  }
+
+  .gutter pre {
+    padding-left 10px
+    padding-right 10px
+    margin 0     
+    text-align right       
+    font-size  $number-font-size
+    background-color $highlight-gutter-bgcolor 
+    color $highlight-gutter-color
+    font-family $number-font-family
+  }
+
+  .code pre {
+    width: 100%
+    padding-left: 10px
+    padding-right: 10px
+    background-color: $highlight-background
+  }
+
+  .line { 
+    display: inline-block;
+    padding: 2px 0;
+    height: 20px;   
+    border: none;
+  }
+   
+
+  .marked{
+    width: 100%
+    border-left 2px solid $highlight-marked   
+    margin .5em 0
+    padding-left .5em
+  }
+}
+
+
+.gutter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;  
+}
+
+.gist table {
+  width: auto;
+
+  td { 
+    border: none; }
+}
+
+
+// For diff highligh
+pre .deletion { background: $highlight-deletion; }
+pre .addition { background: $highlight-addition; }
+pre .meta     { color: $highlight-purple; }
+
+pre {
+
+  .comment { color: $highlight-comment; }
+
+  .variable
+  .attribute
+  .tag
+  .regexp
+  .ruby .constant
+  .xml .tag .title
+  .xml .pi
+  .xml .doctype
+  .html .doctype
+  .css .id
+  .css .class
+  .css .pseudo {
+    color: $highlight-red;
+  }
+
+  .number
+  .preprocessor
+  .built_in
+  .literal
+  .params
+  .constant
+  .command {
+    color: $highlight-orange;
+  }
+
+  .ruby .class .title
+  .css .rules .attribute
+  .string
+  .value
+  .inheritance
+  .header
+  .ruby .symbol
+  .xml .cdata
+  .special
+  .number
+  .formula {
+    color: $highlight-green;
+  }
+
+  .title
+  .css .hexcolor {
+    color: $highlight-aqua;
+  }
+
+  .function
+  .python .decorator
+  .python .title
+  .ruby .function .title
+  .ruby .title .keyword
+  .perl .sub
+  .javascript .title
+  .coffeescript .title {
+    color: $highlight-blue;
+  }
+
+  .keyword
+  .javascript .function {
+    color: $highlight-red;
+  }
+}
+
+//---------------------------------
+
+.highlight
+  position relative  
+  width 100% 
+  &:after
+    position: absolute
+    top: 0
+    right 0
+    color: #ccc  
+    content: "Code"
+    font-size: 12px
+    padding: 5px 10px 0
+    height: 15px  
+ 
+.highlight 
+  &.html.highlight:after
+    content "HTML"
+  &.javascript.highlight:after
+    content "JS"
+  &.js.highlight:after
+    content "JS"
+  &.bash.highlight:after
+    content "Shell"
+  &.css.highlight:after
+    content "CSS" 
+  &.sass.highlight:after
+    content "SASS"
+  &.less.highlight:after
+    content "LESS"
+  &.styl.highlight:after
+    content "Styl" 
+  &.java.highlight:after
+    content "Java"  
+  &.c++.highlight:after
+    content "C++"
+  &.c.highlight:after
+    content "C"  
+  &.yml.highlight:after
+    content 'YML'
+  &.php.highlight:after
+    content 'PHP'
+
+p code
+  padding 2px 8px  
+  text-shadow 1px 2px 1px rgba(0,0,0,0.02)
+  box-shadow 0  2px 2px rgba(0,0,0,0.05)  
+  font-size $code-font-size
+  color: $highlight-foreground
+  background: $highlight-background 
