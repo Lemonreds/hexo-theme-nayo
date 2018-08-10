@@ -7,13 +7,9 @@
     <div class="header-menu">          
         <% for (var i in theme.menu){ %>      
             <% if ( i  == 'search' ){%>
-
               <a class="iconfont icon-menu-search header-menu-link" id="header-menu-search"></a>
-
             <% } else {%>
-
               <a class="header-menu-link" id="header-menu-<%-i%>" href="<%- url_for(theme.menu[i]) %>"><%= __('Menu.'+i) %></a>     
-
             <% } %>
       <% } %>          
     </div>  

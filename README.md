@@ -37,19 +37,18 @@ theme: Nayo
 
 ## Modify theme 
 
-修改主题。
+0. 基于jquery,stylus,ejs和参照hexo文档
 
-install dependencies | npm安装依赖
+1. install dependencies [npm安装依赖]
 ```
 npm install 
 ```
-
-modify theme | 修改styl/js开发环境
+2. modify theme [开发环境]
 ```
 npm run dev
 ```
 
-build once | 打包一次styl|js
+3. build once [打包一次文件] 
 ```
 npm run build
 ```

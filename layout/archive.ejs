@@ -19,8 +19,8 @@
           <% last = year %>	    
       <% }%>
         <div class="archive-item">
-          <h3 class="archive-time"> <%= date(post.date,  "MMM Do") %> </h3>
-          <h3 class="archive-title"> <a  href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a></h3>
+          <time class="archive-time"> <%= date(post.date,  "MMM Do") %> </time>
+          <span class="archive-title"> <a  href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a></span>
         </div>
 
     <% }) %>

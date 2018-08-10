@@ -129,3 +129,4 @@ function fixedHeader() {
 
 // just say hi....
 console.log('Hexo Theme Nayo, By Lemonreds.');
+console.log('@see [https://github.com/Lemonreds/hexo-theme-nayo]');

@@ -11,7 +11,7 @@ html,body
 
 body
   overflow-x hidden
-  font  300 $font-size $font
+  font 300 $font-size $fonts
 
 
 @media mq-mobile 
@@ -88,13 +88,20 @@ time
       bottom 56px
       right 28px
 
-.container   
-  margin-top 2rem
-  padding 0 1.8rem 
-  min-height 50vh
+.container  
+  padding 2rem 1.8rem 0 1.8rem
+  min-height 60vh 
   
 .main   
     margin 0 auto
     width 54%    
     @media mq-middle
-      width 68%
+      width 100%    
+    @media mq-tablet
+      width 98% 
+    @media mq-middle 
+      width 80%
+    @media mq-normal
+      width 56% 
+    @media mq-desktop 
+      width 54%
