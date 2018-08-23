@@ -77,6 +77,7 @@
          new ExtractTextPlugin('nayo.min.css'),
          new CleanPlugin('./source', {
              exclude: ['images', 'fonts']
+            //  exclude: ['images']
          }),
          new webpack.optimize.OccurrenceOrderPlugin(),
          new webpack.optimize.UglifyJsPlugin()

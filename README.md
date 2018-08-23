@@ -41,14 +41,14 @@ theme: Nayo
 
 1. install dependencies [npm安装依赖]
 ```
-npm install 
+$ npm install 
 ```
 2. modify theme [开发环境]
 ```
-npm run dev
+$ npm run dev
 ```
 
 3. build once [打包一次文件] 
 ```
-npm run build
+$ npm run build
 ```

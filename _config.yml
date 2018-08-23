@@ -33,10 +33,11 @@ social:
   Weibo:
 # Zhihu:
   Facebook:
-  Twitter:
+#  Twitter:
   Instagram:
-  LinkedIn:
-
+#  LinkedIn:
+  Neteasemusic:
+#  Csdn: 
 
 # toc
 # 文章的目录 
@@ -47,7 +48,7 @@ toc:
 # 站点访问统计
 # [ analytics id ]
 baidu_analytics:
- 636802045446222199ae541e32c8133e 
+ #636802045446222199ae541e32c8133e 
 google_analytics: 
 
 # comment
@@ -107,10 +108,10 @@ mathjax:
 # 底部信息
 footer:
   author: Lemon
-  since: 2017
+  since: 2018
 
 
 # theme version
 #
 version:
-  0.3.1
+  0.3.2
