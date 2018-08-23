@@ -1,6 +1,8 @@
 <% if(theme.toc){  %>
-	<div class="sidebar">
-		<h4 class="toc-title"><%= __('Contents')%></h4>
-		<%- toc(page.content,{list_number:false}) %>
+	<div class="toc-container">
+			<div class="sidebar">
+			<h4 class="toc-title"><%= __('Contents')%></h4>
+			<%- toc(page.content,{list_number:false}) %>
+		</div>
 	</div>
 <% } %>

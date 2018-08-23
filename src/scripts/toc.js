@@ -14,14 +14,8 @@ exports.init = () => {
 function initClickListener() {
 
 	const $tc = $('.toc-title'),
-		$tl = $('.toc'),
-		$sb = $(".sidebar");
-
-	if($tl.length != 0){
-		$sb.show()
-	}else{
-		return;
-	}
+		$tl = $('.toc')
+		
 
 	$tc.click(() => {
 		if ($tl.is(':visible')) {

@@ -42,7 +42,7 @@ social:
 # toc
 # 文章的目录 
 toc:
-    false
+    true
 
 # site analytics 
 # 站点访问统计

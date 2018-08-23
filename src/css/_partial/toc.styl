@@ -1,15 +1,11 @@
     
 .sidebar
-    display none
     padding 1.8em 0    
     position absolute
     width 250px   
     height 100%
-    top 18%
+    top 16%
     left 79%     
-    overflow hidden	
-    @media mq-mobile 
-      display none
 	&>.toc-title
 		display block
 		text-align center 		
@@ -17,17 +13,35 @@
 		color rgba(0,0,0,.5)
 		cursor pointer	
 		&:hover		
-			color $thr-clr 
-	&>.toc
+			color $thr-clr
+	& >.toc-text
+		color rgba(0,0,0,.75)
+		font-size .95rem 
+	& .toc-child > .toc-text
+		color rgba(0,0,0,.6)
+		font-size .92rem
+	& .toc,& .toc-child
 		list-style-type none 
 
+
+.toc-container
+	@media mq-mobile 
+      display none !important
+	@media mq-tablet
+	  display none !important
+	@media mq-middle 
+	  display none !important
+    @media mq-normal
+      display block !important
+    @media mq-desktop 
+      display block !important
 
 //----------js
 .toc-fixed	
 	position fixed 
 	top 2%
 	left 79%	
-	height 86%
+	height 86%	
 	
 .toc-active		
 	color $thr-clr 		
