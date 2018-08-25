@@ -15,7 +15,7 @@
 				<%- partial('_partial/_post/gallery',{post:page}) %>			
 		<%}%>
 
-			<% if (page.excerpt && page.excerpt_ignore){ %>
+			<% if (page.excerpt && page.hide_excerpt ){ %>
 					<%- page.more %>  					
 			<%} else{%>
 					<%- page.content %>  	

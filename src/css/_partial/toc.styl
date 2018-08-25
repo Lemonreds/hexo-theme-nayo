@@ -9,19 +9,25 @@
 	&>.toc-title
 		display block
 		text-align center 		
-		font-size 1rem
+		font-size .95rem
 		color rgba(0,0,0,.5)
 		cursor pointer	
 		&:hover		
 			color $thr-clr
 	& >.toc-text
 		color rgba(0,0,0,.75)
-		font-size .95rem 
+		font-size .93rem 
 	& .toc-child > .toc-text
 		color rgba(0,0,0,.6)
-		font-size .92rem
-	& .toc,& .toc-child
-		list-style-type none 
+		font-size .90rem
+
+.toc-list
+	margin-left 15px
+	list-style-type none
+	& ol,& ul
+		list-style-type none
+	& .toc-inner
+		margin-left 0
 
 
 .toc-container
@@ -44,5 +50,6 @@
 	height 86%	
 	
 .toc-active		
-	color $thr-clr 		
+	& .toc-inner-text
+		color $thr-clr !important
 	
