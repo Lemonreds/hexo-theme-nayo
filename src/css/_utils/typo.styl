@@ -1,33 +1,38 @@
 // 文章排版
 
-
 h1,h2,h3,h4,h5,h6,th   
-    color #454545
-    font-weight 300
-    letter-spacing .6px
-    word-spacing .6px   
-
+  color  #000000
+  font-weight 300
+  letter-spacing .8px
+  word-spacing .8px   
 h1
-  margin 1.4em 0
-  font-size 26px   
+  margin 1.6em 0
+  font-size 28px   
 h2  
-  margin 1.3em 0
-  font-size 23px
+  margin 1.5em 0
+  font-size 24px
 h3
-  margin 1.3em 0
-  font-size 23px
-    
+  margin 1.4em 0
+  font-size 22px
 h4,h5,h6
-  margin 1.2em 0
-  font-size 18px 
+  margin 1.3em 0
+  font-size 20px 
 
-.post-content  p ,.article-excerpt p
-   margin 1.4em 0
-   line-height 2.15
-   font-size 0.88rem  
-   
+.typo p 
+  margin 1.4em 0
+  line-height 2
+  font-size 15px
+  font-weight 300
+  color#000
+  letter-spacing 0.12px
+  word-spacing 0.64px   
+.typo img 
+  margin 1.2em 0 
+.typo li
+  line-height 2
+
 strong
-   font-weight 500   
+  font-weight 500   
    
 blockquote
   display block
@@ -50,19 +55,18 @@ ul,ol
   padding-left 0px
 ul p , ol p 
   margin 0
-
 li
   font-size 15px  
   margin 8px 0 
   position relative
- 
+
+
 table 
   border-collapse collapse
   border-spacing 0
   font-size 14px
   margin 28px 0
- 
-    
+     
 th
   font-size 14px  
   
@@ -80,15 +84,10 @@ dt,dd
   & p
     margin 0 0 .8em
 
-.article-excerpt,.post-content
-  & a
-    font-size 0.9rem
-    color $thr-clr !important  
-    text-decoration: underline
-    font-family: 'Arial'
-    &:hover    
-       color $sub-clr !important  
-
-.post-content
-  & img 
-    margin 1.2em 0 
+.typo a
+  font-size 0.9rem
+  color $thr-clr !important  
+  text-decoration underline
+  font-family 'Arial'
+  &:hover    
+    color $sub-clr !important  

@@ -1,18 +1,23 @@
 *  
   box-sizing border-box
-
-html,body
-  height 100%
-  width 100%
-  background $bgr
-  letter-spacing .4px
   margin 0
   padding 0 
 
+html,body 
+  height 100%
+  width 100%
+  letter-spacing .4px
+
+
+html
+  font-family sans-serif
+  line-height 1.15
+  background $bgr
 body
   overflow-x hidden
-  font 300 $font-size $fonts
-
+  font 300 1em/1.8  $fonts
+  font-size $font-size 
+  
 
 @media mq-mobile 
   html 
@@ -34,10 +39,12 @@ a
  text-decoration none   
  transition all .2s ease-in-out
  &:link,&:visited,&:active 
-   color rgba(0,0,0,.75)
+   color #232729
  &:hover
    color $thr-clr
    
+
+
 img
   display block
   max-width 100% 
@@ -107,3 +114,6 @@ time
       width 56% 
     @media mq-desktop 
       width 54%
+
+::selection 
+  background: 	#EBEBEB

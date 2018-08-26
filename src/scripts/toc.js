@@ -66,9 +66,7 @@ function initFollow() {
 function highLight(text) {
 
 	let $toc_text = $('.toc-inner li');
-
-	console.log(text)
-
+	
 	$toc_text.each(function () {
 		if ($(this).text() === text) {
 			$(this).addClass('toc-active');
