@@ -8,20 +8,20 @@
   @media mq-middle
       max-width 100%    
   @media mq-tablet
-      max-width 98% 
+      max-width 100% 
   @media mq-middle 
-      max-width 80%
+      max-width 100%
   @media mq-normal
-      max-width 58% 
+      max-width 54% 
   @media mq-desktop 
-      max-width 58%
+      max-width 54%
 
            
 .header-menu
     float right
-    display flex
-    justify-content flex-end
-    white-space nowrap  
+    text-align right 
+    height 100%
+    overflow hidden
     
 .header-menu-link  
     @extend $oneline    
@@ -29,6 +29,12 @@
     font-size .9rem
     display inline-block 
     letter-spacing 1px 
+    cursor pointer
+    & i
+        width 44px
+        margin-right 8px
+        font-size 1.2rem
+  
 
 
 //---------js  

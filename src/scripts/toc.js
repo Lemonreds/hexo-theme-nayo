@@ -12,7 +12,7 @@ exports.init = () => {
 function initClickListener() {
 
 	const $tc = $('.toc-title'),
-		$tl = $('.toc')
+		$tl = $('.toc-list')
 		
 
 	$tc.click(() => {

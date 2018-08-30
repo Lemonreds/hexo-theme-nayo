@@ -8,17 +8,19 @@
 	color $sub-clr
 	height 40px
 	&>.prev,&>.next	
+		@extends $fade
 		display inline-block
-		padding 4px 12px 	
+		padding 6px 12px 	
 		border-radius 4px
 		position absolute
+		border 1px solid $line-clr
 	&>.prev  
 		left 2px
 	&>.next  
 		right 2px
 	&>.page-number
 		display inline-block
-		min-width 100px
+		min-width 80px
 		height 100%
 		padding 6px 2px	
 		font-size 14px	
