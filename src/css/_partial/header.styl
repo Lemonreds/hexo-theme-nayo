@@ -1,6 +1,6 @@
 .header
   width 100%
-
+  transition all .4s
 .header-nav   
   margin 0 auto  
   height 4rem
@@ -12,27 +12,28 @@
   @media mq-middle 
       max-width 100%
   @media mq-normal
-      max-width 54% 
+      max-width 52% 
   @media mq-desktop 
-      max-width 54%
+      max-width 50%
 
            
 .header-menu
     float right
     text-align right 
     height 100%
-    overflow hidden
     
 .header-menu-link  
     @extend $oneline    
-    margin 0 .86rem 
+    margin-right 2rem 
     font-size .9rem
     display inline-block 
     letter-spacing 1px 
     cursor pointer
+    & .header-menu-title
+        margin-left 4px
+        font-size 13px
     & i
         width 44px
-        margin-right 8px
         font-size 1.2rem
   
 
@@ -41,14 +42,16 @@
 .header-static
   position static
   background-color $bgr
+  box-shadow none
 .header-fixed
   position fixed
   z-index 999
   top 0
   left 0
-  opacity .8
+  opacity .95
   background-color $bgr
   transition all .6s   
+  box-shadow 0 1px 1px rgba(0, 0, 0, .09)
 .header-menu-active  
   color $thr-clr !important   
 .header-title

@@ -13,6 +13,8 @@
           <% } else {%>
             <a class="header-menu-link" id="header-menu-<%-i%>" href="<%- url_for(theme.menu[i]) %>">
               <i class="iconfont icon-<%-i %>" />  
+
+              <span class="header-menu-title"><%= __(`Menu.${i}`) %></span>
             </a>     
           <% } %>
         <% } %>          
