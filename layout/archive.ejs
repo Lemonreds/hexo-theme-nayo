@@ -10,10 +10,10 @@
 
         <%if(last != year ){%>            
 
-          <% var posts = postsCount(site.posts , year) %>
+          <%# var posts = postsCount(site.posts , year) %>
           <div class="archive-part">
               <span class="archive-part-item">
-                <span><%= year %></span> - <span><%= posts %> </span>
+                <span><%= year %></span>     
               </span>
           </div>
           <% last = year %>	    

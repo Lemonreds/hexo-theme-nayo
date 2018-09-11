@@ -1,55 +1,58 @@
-    
-.sidebar
-    padding 1.8em 0    
-    position absolute
-    width 250px   
-    height 100%
-    top 16%
-    left 79%     
-	&>.toc-title
-		display block
-		text-align center 		
-		font-size .95rem
-		color rgba(0,0,0,.5)
-		cursor pointer	
-		&:hover		
-			color $thr-clr
-	& >.toc-text
-		font-size .9rem 
-	& .toc-child > .toc-text
-		font-size .85rem
+.toc-sidebar
+ display none    
+.toc-title
+ display block
+ text-align center 
+ font-size .9rem
+ color rgba(0,0,0,.7)
+ cursor pointer
+ font-weight 600
+ &:hover
+  color $thr-clr
+
 
 .toc-list
-	margin-left 15px
-	list-style-type none
-	& ol,& ul
-		list-style-type none
-	& span
-		color rgba(0,0,0,.6)
-	& .toc-inner
-		margin-left 0
+ margin 16px 0 0 15px
+ list-style-type none
+ & ol,& ul
+  list-style-type none
 
+.toc-inner
+  margin-left 0
+	& li
+		margin .4rem 0
+
+
+.toc-text
+ font-size .75rem 
+ color rgba(0,0,0,.7)
+.toc-child > .toc-text
+ font-size .7rem
+ margin-left .2rem
+ color rgba(0,0,0,.65)
 
 .toc-container
-	@media mq-mobile 
-      display none !important
-	@media mq-tablet
-	  display none !important
-	@media mq-middle 
-	  display none !important
-    @media mq-normal
-      display block !important
-    @media mq-desktop 
-      display block !important
+  position absolute
+  width 250px   
+  height 100%
+  top 16%
+  left 79%  
+  @media mq-mobile 
+    display none !important
+  @media mq-tablet
+    display none !important
+  @media mq-middle 
+    display none !important
+  @media mq-normal
+    display block !important
+  @media mq-desktop 
+    display block !important
 
 //----------js
-.toc-fixed	
-	position fixed 
-	top 2%
-	left 79%	
-	height 86%	
-	
-.toc-active		
-	& .toc-inner-text
-		color $thr-clr !important
-	
+.toc-fixed
+ position fixed 
+ top 5%
+ left 79%  
+.toc-active
+ & .toc-inner-text
+  color $thr-clr !important

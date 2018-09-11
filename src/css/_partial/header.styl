@@ -1,6 +1,9 @@
 .header
   width 100%
   transition all .4s
+  box-shadow 0 1px 1px rgba(0, 0, 0, .05)
+  @media mq-mobile 
+    box-shadow none
 .header-nav   
   margin 0 auto  
   height 4rem
@@ -18,14 +21,14 @@
 
            
 .header-menu
+    text-align center 
     float right
-    text-align right 
     height 100%
-    
+
 .header-menu-link  
     @extend $oneline    
-    margin-right 2rem 
-    font-size .9rem
+    margin-right 1.65rem
+    font-size 12px
     display inline-block 
     letter-spacing 1px 
     cursor pointer
@@ -35,14 +38,15 @@
     & i
         width 44px
         font-size 1.2rem
-  
+.header-menu-link:last-child
+    margin-right 0
 
 
 //---------js  
 .header-static
   position static
   background-color $bgr
-  box-shadow none
+  box-shadow 0 1px 1px rgba(0, 0, 0, .05)
 .header-fixed
   position fixed
   z-index 999

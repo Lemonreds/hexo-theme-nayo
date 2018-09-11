@@ -7,9 +7,14 @@
   border-bottom 1px solid $line-clr 
   & > .post-title 
     font-size 2rem 
+    line-height 1.4
+    margin 1.5rem 0
     color rgba(0,0,0,.9) 
+    @media mq-mobile 
+      margin .8rem 0
+      font-size 1.75rem
   & > .meta-info
-    margin-bottom 10px
+    margin-bottom .5rem
     & > span
       margin-right 16px
 
@@ -49,6 +54,7 @@
   display inline-block 
   font-size .9rem
 .donate-list 
+  margin-top 20px
   height auto
 //----- donate js
 .donate-active
@@ -57,92 +63,100 @@
 .-mob-share 
   fixed-center(340px,240px)  
   display none    
-  padding 20px 0   
   text-align center
-  border-radius: 10px   
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.05)
-.-mob-share a 
-  padding 4px
-  font-size 1.28rem 
-  display inline-block
-  min-width 80px   
-  padding 4px 6px
-  margin 4px 
-  border-radius 4px
-  cursor pointer
-  &:hover
-    color $thr-clr 
+  border-radius 10px  
+  overflow hidden 
+  box-shadow 0 5px 10px 0 rgba(0,0,0,0.05)
+  
+.-mob-share > .-mob-inner
+  display flex
+  justify-items center
+  align-items center
+  width 100%
+  height 100%
+  word-wrap wrap
+  &> .-mob-share-link 
+    width 33%
+    height 25%
+    font-size 1.28rem 
+    cursor pointer
+    &:hover
+      color $thr-clr 
 .-mob-share-weixin-qrcode-bg    
    background-color rgba(0,0,0,.13) !important 
 .-mob-share-weixin-qrcode-content
    border 1px solid $line-clr !important
 
-.post-meta
-  margin 5rem 0 1rem
-  & > a
-      @extend $item
-    
 .post-footer
-  width 100%
-  height 220px
-  position relative
-  border 1px solid  $line-clr
-  border-radius 4px
-  display flex 
-  justify-content space-between 
-  align-items center
-  padding 26px 12px
-  margin-bottom 4rem 
-  text-align right 
-  box-sizing border-box
-  & > div
-    width 50%
-    height 100%   
-  @media mq-mobile 
-    padding 4px 
+  overflow hidden
+  padding 12px 0
+  border-bottom 1px solid $line-clr
+.post-footer-meta 
+  float left
+  & > a
+    @extend $item
+.post-footer-other
+  float right
+  &>.post-footer-item
+    padding 4px 2px
+    height 22px
+    line-height 22px
+    text-align center
+    border-radius 4px
+    margin-right .5rem
+    border 1px solid $line-clr
+    transition all .25s ease-in-out 
+    cursor pointer
+    &:hover
+      border 1px solid $thr-clr
     
+ 
+.post-footer-other,.post-footer-meta 
+  @media mq-mobile
+    float left
+    clear both
+    margin-bottom 0.5rem
+.post-footer-other
+  @media mq-mobile
+    float right
+.post-footer-meta 
+  @media mq-mobile
+    float left
 
-.pf-avatar
-	width 90px
-	height 90px
-	padding 4px
-	border 1px solid $line-clr  
-	border-radius 50%  
-	box-shadow 0 2px 2px rgba(0,0,0,0.06)	 
+.post-footer-nav
+  overflow hidden
+  padding 3rem 0 2rem 
+  margin-bottom 3rem
+  border-bottom 1px solid $line-clr
 
-.pf-left
-  text-align center
-  & >.pf-des
-    color rgba(0,0,0,.65)
-    font-size .95rem
-  & >.pf-avatar
-    width 90px
-    height 90px
-    padding 1px
-    border 1px solid $line-clr  
-    border-radius 50%  
-    box-shadow 0 2px 2px rgba(0,0,0,0.06)	 
-
-
-.pf-right
-  display flex 
-  flex-direction column 
-  & > div,& > nav
+.post-footer-link
+  @extend $oneline
+  width 50%
+  float left
+  margin-bottom 1.8rem
+  @media mobile 
+    float none
     width 100%
-    height 50% 
-  &>.pf-paginator
-    display flex
-    justify-content center
-    align-items flex-end
-    & a
-      @extend $tips
-      @extend $fade
-      border-radius 4px 
-      padding 6px 12px 
-      border 1px solid $line-clr
-      margin 0 6px  
-      font-size 15px
-      @media mq-mobile 
-        padding 6px
-        margin 10px 6px
-        font-size 14px
+    diplay block 
+
+
+.post-nav-link-wrap
+  text-decoration none
+  text-shadow 0 1px #fff
+  text-align center
+  display block
+  @media mq-normal
+    width 50%
+    margin-top 0
+
+.post-nav-caption
+  text-transform uppercase
+  letter-spacing 2px
+  line-height 1rem
+  font-weight bold
+
+.post-nav-title
+  display block
+  text-align center
+  font-size 0.8rem
+  margin-top 0.5rem

@@ -4,25 +4,31 @@
 
 exports.init = () => {
 
-	initClickListener();
-	initFixListener();
-	initFollow();
-}
+	const $tocSider=$('.toc-sidebar'),
+		$tocTitle = $('.toc-title'),
+		$tocList = $('.toc-list')
 
-function initClickListener() {
-
-	const $tc = $('.toc-title'),
-		$tl = $('.toc-list')
-		
-
-	$tc.click(() => {
-		if ($tl.is(':visible')) {
-			$tl.hide();
+	// 仅在post页启用脚本
+	if(!$tocList[0])return;
+	// 当toc目录有内容的时候才显示toc容器
+	if($tocList[0].innerHTML.trim() !== ''){
+		$tocSider.show()
+	}else return
+	// 绑定点击 显示/隐藏 toc 功能
+	$tocTitle.click(() => {
+		if ($tocList.is(':visible')) {
+			$tocList.hide();
 		} else {
-			$tl.show();
+			$tocList.show();
 		}
 	});
+
+	// 滑动 固定导航栏
+	initFixListener()
+	// toc目录根据阅读进度 跟随
+	initFollow()
 }
+
 
 //滑动 固定Toc
 function initFixListener() {
@@ -33,7 +39,7 @@ function initFixListener() {
 
 function tocPosition() {
 
-	const $tc = $(".sidebar");
+	const $tc = $(".toc-container");
 
 	if ($tc.length > 0) {
 		//获取 toc 容器 到 document 的 距离
@@ -85,6 +91,6 @@ function getOffsetTop($obj) {
 
 function checkIsHideToc() {
 	const height = $(window).height(),
-		nav_height = $('.post-footer').offset().top - $(document).scrollTop();
+		nav_height = $('.post-footer-nav').offset().top - $(document).scrollTop();
 	return (nav_height <= height);
 }

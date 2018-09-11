@@ -68,9 +68,19 @@ $tips
 
    
 @keyframes tipsAnimation
-    0%
-        transform translateY(10px) 
-        opacity .8 
-    100%
-        transform translateY(-4px) 
-        opacity 1
+  0%
+    transform translateY(10px) 
+    opacity .8 
+  100%
+    transform translateY(-4px) 
+    opacity 1
+
+$clerfix
+  &:after
+    content ''
+    clear both
+    visibility hidden
+    
+
+
+    

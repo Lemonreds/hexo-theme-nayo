@@ -9,9 +9,11 @@ src="http://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script
 
 
 	<div class="-mob-share sildeUpMin">
+		<div class="-mob-inner">
 		<% for ( i in theme.share_item){ %>   			             
-            <a class="iconfont  icon-share-<%-theme.share_item[i]%> -mob-share-<%-theme.share_item[i]%>"
+            <a class="iconfont icon-share-<%-theme.share_item[i]%> -mob-share-link"
 			></a>		
      	<% } %>   
+		</div>
 	</div>	
 <%}%>

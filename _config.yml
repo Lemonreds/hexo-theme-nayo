@@ -6,6 +6,7 @@ menu:
   tags: tags
   about: about
   search: search
+  
 
 # site title 
 # 网站的标题
@@ -20,7 +21,6 @@ profile:
   author: Lemon
   logo: /images/logo.jpg
   avatar: /images/header.jpg  
-  description: hi,i am lemon
 
 # site favicon
 # 图片放置于主题目录下: source/imgaes/
@@ -54,7 +54,7 @@ google_analytics:
 # disqus(https://disqus.com/)
 # 填入shortname即可
 disqus:
-  comment: true
+  comment: false
   shortname: lemonreds
 
 # valine(https://github.com/xCss/Valine)
@@ -136,4 +136,4 @@ footer:
 # theme version
 # enjoy it!
 version:
-  0.3.3
+  0.3.4
