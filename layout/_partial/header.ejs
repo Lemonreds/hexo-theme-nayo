@@ -4,6 +4,12 @@
 
     <span class="iconfont icon-menu mobile-toggle"></span>   	
 
+    <div class="header-logo">
+      <a href="/">
+        <img class="header-logo-img" src="<%- url_for(theme.profile.logo) %>"/>
+      </a>
+    </div>
+
     <div class="header-menu">          
         <% for (var i in theme.menu){ %>      
           <% if ( i  == 'search' ){%>
@@ -11,10 +17,11 @@
                 <i class="iconfont icon-<%-i %>" />  
               </a>
           <% } else {%>
-            <a class="header-menu-link" id="header-menu-<%-i%>" href="<%- url_for(theme.menu[i]) %>">
+            <a 
+            class="header-menu-link" 
+            id="header-menu-<%-i%>" 
+            href="<%- url_for(theme.menu[i]) %>">
               <i class="iconfont icon-<%-i %>" />  
-
-                <span class="header-menu-title"><%= __(`Menu.${i}`) %></span>
             </a>     
           <% } %>
         <% } %>          

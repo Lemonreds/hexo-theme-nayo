@@ -19,7 +19,7 @@ title: hexo-theme-nayo
 # author为空时 Hexo/_config.yml 配置有效
 profile: 
   author: Lemon
-  logo: /images/logo.jpg
+  logo: /images/logo.png
   avatar: /images/header.jpg  
 
 # site favicon
@@ -134,6 +134,5 @@ footer:
 
 
 # theme version
-# enjoy it!
 version:
-  0.3.4
+  0.3.5
