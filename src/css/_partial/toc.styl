@@ -17,9 +17,9 @@
  &:after
    position absolute
    content  " "
-   width 38%
+   width 30%
    height 3px 
-   left 31%
+   left 35%
    bottom 0
    background-color #f0f0f0
 
@@ -33,9 +33,8 @@
 
 .toc-inner
   margin-left 0
-	& li
-    border-left 3px solid #f0f0f0
-    padding 4px 0 0 16px
+	& ol>li,& ul>li
+    padding-left 14px
 
 .toc-text
  font-size .75rem 
@@ -68,7 +67,15 @@
  top 5%
  left 79%  
 .toc-active
- border-left 3px solid $thr-clr
+ position relative
+ &:before
+   position absolute
+   content " "
+   width 2px
+   height 60%
+   top 20%
+   left 0
+   background-color $thr-clr
  & .toc-inner-text
   color $thr-clr !important
 
