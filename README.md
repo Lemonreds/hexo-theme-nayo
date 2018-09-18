@@ -12,7 +12,7 @@ a concise theme for hexo.
 
 1. Get Nayo from github 
 ```
-$ git clone https://github.com/Lemonreds/nayo.git themes/nayo
+$ git clone https://github.com/Lemonreds/hexo-theme-Nayo themes/nayo
 ```
 
 or dowanload zip and rename Nayo into **yourblog/themes/**  
