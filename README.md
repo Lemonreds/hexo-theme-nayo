@@ -15,7 +15,7 @@ a concise theme for hexo.
 $ git clone https://github.com/Lemonreds/hexo-theme-Nayo themes/nayo
 ```
 
-or dowanload zip and rename Nayo into **yourblog/themes/**  
+or download zip and rename Nayo into **yourblog/themes/**  
 
 2. Modify theme setting in yourblog/_config.yml to Nayo. 
 
