@@ -6,7 +6,7 @@ a concise theme for hexo.
 
 ## Preview
 
-![Where is my image?](https://github.com/Lemonreds/hexo-theme-nayo/blob/master/src/nayo.png)
+![Where is my image?](https://github.com/Lemonreds/hexo-theme-nayo/blob/master/src/nayo.jpg)
 
 ## Installation
 
