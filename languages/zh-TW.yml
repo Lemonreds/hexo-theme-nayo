@@ -16,7 +16,10 @@ Post:
   Share: 分享
   Prev: older
   Next: newer
-  
+ 
+Archive:
+  count: "共有 %d 篇文章"
+   
 Paginator: 
   Prev: 上一頁
   Next: 下一頁

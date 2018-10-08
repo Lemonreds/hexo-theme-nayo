@@ -16,6 +16,9 @@ Post:
   Share: Share
   Prev: older
   Next: newer
+ 
+Archive:
+  count: "%d posts in total"
   
   
 Paginator: 

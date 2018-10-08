@@ -1,6 +1,9 @@
 <section class="archive slideDownMin">
 
     <span class="page-title"><%=  __('Page.Archives') %></span>  
+    <p class="archive-count">
+      <span class="archive-count-inner"> <%=__('Archive.count',site.posts.length)%></span>
+    </p>
     <% var  date_format = config.date_format  %>
     <% var last %> 
    

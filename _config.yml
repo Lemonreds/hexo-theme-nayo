@@ -94,7 +94,7 @@ donate:
 # 全局控制文章的概要是否显示
 # 可以在单个文章设置是否显示toc (参见下方说明)
 toc:
-  true
+  false
 
 # mathjax 
 # 渲染LateX公式
