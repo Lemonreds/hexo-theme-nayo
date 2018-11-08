@@ -33,12 +33,12 @@ function scrollToId(id) {
     }, 400);
 }
 
-function createMask() {
+function createMask(maskClassName = "page-mask") {
 
-    let $mask = $('.mask');
+    let $mask = $('.' + maskClassName);
     if ($mask.length === 0 ) {
         let mask = document.createElement('div');
-        mask.className = 'mask';   
+        mask.className = maskClassName;   
         document.getElementsByTagName('body')[0].appendChild(mask);
         $mask = $(mask);
     } 

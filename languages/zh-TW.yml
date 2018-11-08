@@ -18,7 +18,7 @@ Post:
   Next: newer
  
 Archive:
-  count: "共有 %d 篇文章"
+  count: "%d"
    
 Paginator: 
   Prev: 上一頁

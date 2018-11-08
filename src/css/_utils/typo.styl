@@ -8,10 +8,10 @@ h1,h2,h3,h4,h5,h6,th
   
 h1
   margin 1.4em 0 1em
-  font-size 24px   
+  font-size 23px   
 h2  
   margin 1.35em  0 1em
-  font-size 22px
+  font-size 21px
 h3
   margin 1.3em  0 0.8em
   font-size 20px
@@ -21,22 +21,38 @@ h4,h5,h6
 
 .typo p 
   margin 0 0 1.3em 0
-  line-height 1.85
+  line-height 1.8
   letter-spacing 0.8px
   word-spacing 0.9px
   font-size 15px
-  font-weight 300
-  color#3f3f3f
+  color#333
 .typo img 
   margin 1.2em 0 
 .typo li
-  line-height 1.7
+  margin 6px 0 
+  padding-left 12px
+  line-height 1.8
   font-size 15px  
-  margin 8px 0 
-  position relativ
+  list-style-type none
+  position relative
+  &:before
+    content "•"
+    display inline-block
+    margin-right 12px
+    font-size 0.9rem
+    font-weight 400
+    color #787878
+
+.typo a
+  font-size 0.9rem
+  color $thr-clr !important  
+  text-decoration underline
+  font-family 'Arial'
+  &:hover    
+    color $sub-clr !important 
+
 strong
   font-weight 500   
-   
 blockquote
   display block
   letter-spacing .4px
@@ -54,12 +70,11 @@ hr
   opacity .2
   border .2px solid $line-clr
 ul,ol
-  margin-left 22px
+  margin 0 0 1.3em 0
+  line-height 1.8
   padding-left 0px
 ul p , ol p 
   margin 0
-
-
 
 table 
   border-collapse collapse
@@ -80,17 +95,9 @@ th,td
 
 dt,dd
   margin-bottom 10px
-
+ 
 .article-excerpt 
   & h1,& h2,& h3,& h4,& h5,& h6
     margin .8em 0 
   & p
     margin 0 0 .8em
-
-.typo a
-  font-size 0.9rem
-  color $thr-clr !important  
-  text-decoration underline
-  font-family 'Arial'
-  &:hover    
-    color $sub-clr !important  

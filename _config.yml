@@ -64,10 +64,6 @@ leancloud:
   app_id: cFM0eCo0CQ9xmBXmHi1eltol-gzGzoHsz
   app_key: oh9tizsnvV2vNvWgqEvoNtQO
 
-# mob share(http://www.mob.com)
-# 文章分享功能
-mob_share:
-  true
 
 # 支持的分享类型
 share_item:
@@ -89,6 +85,10 @@ donate:
   wechat: /images/donate1.png
   alipay: /images/donate2.png
 
+# mob share(http://www.mob.com)
+# 文章分享功能
+mob_share:
+  true
 
 # toc
 # 全局控制文章的概要是否显示

@@ -49,7 +49,7 @@ function listenerScroll() {
 
     // 记录上次滑动的位置
     let last_scroll = 0,
-        $backTop = $('#backTop');
+        $backTop = $('#page-backTop');
 
     // 监听滚动条
     $(window).scroll(function () {

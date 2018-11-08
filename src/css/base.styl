@@ -3,18 +3,13 @@
   margin 0
   padding 0 
 
-html,body 
-  height 100%
-  width 100%
-  letter-spacing .4px
-
-
 html
   font-family sans-serif
   line-height 1.15
   background $bgr
   -webkit-text-size-adjust none
 body
+  letter-spacing .4px
   overflow-x hidden
   font 300 1em/1.8  $fonts
   font-size $font-size 
@@ -60,16 +55,17 @@ time
   font-size 0.825rem  
 
 .page-title 
-   display block  
-   text-align center  
-   margin-bottom 1.5rem
-   font-size 1.25rem
-   letter-spacing 1px
-   word-spacing 1px
-   font-weight 500
-   color rgba(0,0,0,.7)
+  display block  
+  text-align center  
+  margin-bottom 1.5rem
+  font-size 1.25rem
+  letter-spacing 1px
+  word-spacing 1px
+  font-weight 500
+  color rgba(0,0,0,.7)
+
   
-.mask
+.page-mask
   display none
   position fixed
   top 0
@@ -79,7 +75,7 @@ time
   z-index 998
   background-color rgba(0,0,0,0.04)
 
-#backTop   
+#page-backTop   
     opacity 0
     position fixed   
     cursor pointer
@@ -102,7 +98,7 @@ time
   margin-top 2.5rem
   min-height 80vh 
   
-.main   
+.container-inner  
     margin 0 auto
     width 52%    
     @media mq-middle

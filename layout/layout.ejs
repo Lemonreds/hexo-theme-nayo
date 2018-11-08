@@ -8,16 +8,16 @@
       <div class="container">       
           
           <% if (is_post() || is_home()) { %>
-            <section class="main">  
+            <div class="container-inner">  
           <% } else{ %>
-            <section class="main slideDownMin">
+            <div class="container-inner slideDownMin">
           <% }%>
 
           <%-body%>
-          </section> 
+          </div> 
       </div>            
     
-    <a id="backTop">
+    <a id="page-backTop">
       <span>
         <i class="iconfont icon-backtotop"></i>
       </span>
@@ -28,8 +28,6 @@
     <%- partial('_partial/slide-menu') %>        
     <%- partial('_partial/after-footer') %>     
     <%- partial('_partial/footer') %>   
-
-  
 
     <%- js('nayo.bundle')%>           
   </body>        
