@@ -26,7 +26,7 @@ exports.init = () => {
 //
 // style in header.styl
 //
-const showMenu = function ($icon = $('.mobile-toggle'), $mask = $('.mask')) {
+const showMenu = function ($icon = $('.mobile-toggle'), $mask = $('.page-mask')) {
 
     $icon
         .removeClass('icon-menu')
@@ -55,7 +55,7 @@ const showMenu = function ($icon = $('.mobile-toggle'), $mask = $('.mask')) {
 
 
 
-const hideMenu = function ($icon = $('.mobile-toggle'), $mask = $('.mask')) {
+const hideMenu = function ($icon = $('.mobile-toggle'), $mask = $('.page-mask')) {
 
     $icon
         .removeClass('icon-no-menu')

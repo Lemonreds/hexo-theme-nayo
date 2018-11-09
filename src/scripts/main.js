@@ -1,6 +1,4 @@
 import Stlye from '../css/style.styl'
-
-
 import Index from './index.js'
 import Anm from './animate.js'
 import Mobile from './mobile.js'
@@ -12,20 +10,11 @@ import Gallery from './gallery.js'
 
 import Lazyload from './lazyload'
 
-
 const $ = require('expose-loader?$!./jquery.js')
-
-
-
 $(function () {
-
-
-    let init = (funcs => {
-
+    (funcs => {
         for (let fn of funcs) {
             fn.init()
         }
-
     })([Index, Mobile, Search, Anm, Post, Lazyload, Hover, Gallery])
-
 })

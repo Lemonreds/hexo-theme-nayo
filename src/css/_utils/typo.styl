@@ -1,47 +1,61 @@
 // 文章排版
-
-h1,h2,h3,h4,h5,h6,th   
-  color  #444
-  font-weight 400
-  letter-spacing 1px
-  word-spacing 1px   
-  
-h1
-  margin 1.4em 0 1em
-  font-size 23px   
-h2  
-  margin 1.35em  0 1em
-  font-size 21px
-h3
-  margin 1.3em  0 0.8em
-  font-size 20px
-h4,h5,h6
-  margin 1.25em  0 0.8em
-  font-size 18px 
-
-.typo p 
-  margin 0 0 1.3em 0
-  line-height 1.8
-  letter-spacing 0.8px
-  word-spacing 0.9px
+.typo
   font-size 15px
-  color#333
+  line-height 2
+  color #0d0d0d
+.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6
+  margin 2rem 0 0.8rem 0
+  padding 0
+  font-weight normal
+  list-style none
+  color #000
+.typo h1
+    font-size 36px
+.typo h2
+    font-size 32px
+.typo h3
+    font-size 26px
+.typo h4
+    font-size 19px
+.typo h5
+    font-size 16px
+.typo h6
+    font-size 16px
+.typo strong
+  font-weight 500
+.typo hr
+  margin-top 22px 0
+  border 0
+  border-top 1px solid rgba(102,130,153,0.1)
+.typo p 
+  line-height 30px
+  margin-bottom .8em
+  color #232323
 .typo img 
   margin 1.2em 0 
-.typo li
-  margin 6px 0 
-  padding-left 12px
-  line-height 1.8
-  font-size 15px  
-  list-style-type none
-  position relative
-  &:before
-    content "•"
-    display inline-block
-    margin-right 12px
-    font-size 0.9rem
-    font-weight 400
-    color #787878
+.type del
+  opacity .5
+.typo ul,.typo ol
+  margin 12px 0
+  padding-left 16px
+.typo ul li,.typo ol li
+  margin 4px 0
+  padding-left 8px 
+.typo ul li 
+  list-style disc
+.typo ol li 
+  list-style decimal
+  // list-style-type none
+  // position relative
+  // &:before
+  //   content "•"
+  //   display inline-block
+  //   margin-right 12px
+  //   font-size 0.9rem
+  //   font-weight 400
+  //   color #000
+.typo ul p,.typo ol p
+  margin 0
 
 .typo a
   font-size 0.9rem
@@ -51,53 +65,35 @@ h4,h5,h6
   &:hover    
     color $sub-clr !important 
 
-strong
-  font-weight 500   
-blockquote
+.typo blockquote
   display block
   letter-spacing .4px
   font-size 15px
   padding 0 12px
   margin 2rem 0 
- 
-blockquote p  
+.typo blockquote p  
   margin  0
   padding-left 10px
   border-left 3px solid #eee
-  
-hr
-  margin 1em 0
-  opacity .2
-  border .2px solid $line-clr
-ul,ol
-  margin 0 0 1.3em 0
-  line-height 1.8
-  padding-left 0px
-ul p , ol p 
-  margin 0
 
-table 
+
+
+.typo table 
+  margin 16px 0
+  word-wrap break-word
   border-collapse collapse
   border-spacing 0
-  font-size 14px
-  margin 28px 0
   border-radius 2px
 
-tr:nth-child(even)  
+.typo table tr:nth-child(even)  
   background #fafafa
-th
-  font-size 14px  
   
-th,td
+.typo > table th
+  font-weight 500
+.typo > table th,.typo > table td
   border 1px solid #ddd
   padding .4rem 1rem
   margin 28px 0
-
-dt,dd
+.typo table dt,.typo table dd
   margin-bottom 10px
  
-.article-excerpt 
-  & h1,& h2,& h3,& h4,& h5,& h6
-    margin .8em 0 
-  & p
-    margin 0 0 .8em

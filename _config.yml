@@ -11,7 +11,7 @@ menu:
 # site title 
 # 网站的标题
 # title为空时 Hexo/_config.yml 配置有效
-title: hexo-theme-nayo
+title: HEXO-THEME-NAYO
 
 # author profile
 # 图片放置于主题目录下: source/imgaes/
@@ -31,8 +31,8 @@ favicon: /images/favicon.png
 # 更多链接
 social:  
   Github: https://github.com/Lemonreds/hexo-theme-nayo 
-  Weibo:
-# Zhihu:
+  Weibo: https://weibo.com/liminghong2
+#  Zhihu:
   Facebook:
 #  Twitter:
   Instagram:
@@ -135,4 +135,4 @@ footer:
 
 # theme version
 version:
-  0.3.5
+  0.3.6

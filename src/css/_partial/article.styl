@@ -17,9 +17,11 @@
             font-size .825rem     
         & .article-title
             display block   
-            font-size 1.75rem
-            margin-bottom .5rem
-            line-height 1.5
+            margin-bottom .5rem   
+            font-size 30px
+            font-weight 400 
+            line-height 1.4
+            color #333
             &:link,&:visited,&:active 
                 color rgba(0,0,0,.75)
             &:hover
@@ -41,7 +43,14 @@
                 &:hover
                     color $thr-clr
     & .article-excerpt
-        margin .4rem 1.4rem    
+        margin .4rem 1.4rem  
+    & .article-excerpt 
+        & h1,& h2,& h3,& h4,& h5,& h6
+            margin .8em 0 
+            color #555
+        & p
+            margin 0 0 .8em
+            color #555
     & .article-bottom
         text-align center
         margin 4rem auto 0 auto
