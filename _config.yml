@@ -88,7 +88,7 @@ donate:
 # mob share(http://www.mob.com)
 # 文章分享功能
 mob_share:
-  true
+  false
 
 # toc
 # 全局控制文章的概要是否显示
