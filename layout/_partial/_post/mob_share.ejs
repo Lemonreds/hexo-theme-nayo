@@ -1,16 +1,18 @@
+<span class="share-btn">
+	<span class="iconfont icon-share"></span>
+</span>
+<div class="-mob-share sildeUpMin">
+	<ul class="-mob-inner">
+	<% for ( i in theme.share_item){ %>   			             
+        <li class="iconfont 
+		icon-share-<%-theme.share_item[i]%> 
+		-mob-share-<%-theme.share_item[i]%> 
+		-mob-share-link"
+		></li>		
+   	<% } %>   
+	</ul>
+</div>	
+
+<%# https %>
 <script id="-mob-share" 
 src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
-	
-	<span class="share-btn">
-	<span class="iconfont icon-share"></span>
-	</span>
-
-
-	<div class="-mob-share sildeUpMin">
-		<div class="-mob-inner">
-		<% for ( i in theme.share_item){ %>   			             
-            <a class="iconfont icon-share-<%-theme.share_item[i]%> -mob-share-link"
-			></a>		
-     	<% } %>   
-		</div>
-	</div>	
