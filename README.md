@@ -2,7 +2,7 @@
 
 a concise theme for hexo.
 
-预览 [preview](https://lemonreds.github.io/) | 常见问题 [common issues](https://lemonreds.github.io/2018/02/08/hexo-theme-nayo/) | 更新日志 [ChangeLog](https://github.com/Lemonreds/hexo-theme-nayo/blob/master/src/Changelog.md)
+预览 [preview](https://lemonreds.github.io/) | 常见问题 [common issues](https://lemonreds.github.io/2018/10/01/hexo-theme-nayo/) | 更新日志 [ChangeLog](https://github.com/Lemonreds/hexo-theme-nayo/blob/master/src/Changelog.md)
 
 ## Preview
 
