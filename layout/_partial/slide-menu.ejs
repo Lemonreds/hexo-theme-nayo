@@ -1,7 +1,7 @@
  <div class="mobile-menu">      
 
       <% if ( theme.favicon){ %>
-      <img class="mobile-menu-icon" src= "<%- theme.favicon %>" >   
+      <img class="mobile-menu-icon" src= "<%- url_for(  theme.favicon ) %>" >  
       <% } %>
 
       <% for (var i in theme.menu){ %>   
