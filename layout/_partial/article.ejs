@@ -9,13 +9,7 @@
 		 <%	var date_format = config.date_format %>
 
 		<div class='article-meta'>
-			<time><%= date(post.date,  "MMM DD, YYYY") %></time>
-			<%if(post.tags && post.tags.length){%>
-				<span class="iconfont icon-star"></span>
-				<% post.tags.sort('date',-1).each(function (tag){%>            
-						<a class="article-tag" href="<%- url_for(tag.path) %>"><%- tag.name %></a>           
-				<% })%>
-			<%}%>
+			<time><%= date(post.date,  "MMM DD, YYYY") %></time>			
 		</div>
 	</div>
 
@@ -33,6 +27,15 @@
 		<% } else { %> 
 			<%- post.content %>
 		<%}%>  	  
+	</div>
+
+	<div class="article-tags">
+		<%if(post.tags && post.tags.length){%>
+			<i class="iconfont icon-tags" style="margin-right:4px"></i>
+			<% post.tags.sort('date',-1).each(function (tag){%>            
+				<a class="article-tag" href="<%- url_for(tag.path) %>"><%- tag.name %></a>           
+			<% })%>
+		<%}%>
 	</div>
 
 	<div class='article-bottom'>

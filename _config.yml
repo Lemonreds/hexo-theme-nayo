@@ -31,7 +31,7 @@ favicon: /images/favicon.png
 # 更多链接
 social:  
   Github: https://github.com/Lemonreds/hexo-theme-nayo 
-  Weibo: https://weibo.com/liminghong2
+  Weibo: 
 #  Zhihu:
   Facebook:
 #  Twitter:
@@ -80,7 +80,7 @@ share_item:
 # 捐赠功能
 # 图片放置于主题目录下: source/imgaes/
 donate:
-  enable: true
+  enable: false
   word: 世界美好 你也是
   wechat: /images/donate1.png
   alipay: /images/donate2.png
@@ -135,4 +135,4 @@ footer:
 
 # theme version
 version:
-  0.3.6
+  0.3.7

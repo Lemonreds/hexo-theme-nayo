@@ -1,7 +1,7 @@
 .article 
     opacity 0
     margin-bottom 48px
-    padding 14px 0  
+    padding 1rem 1.5rem 0 
     &:after
         content ""
         position absolute
@@ -11,49 +11,50 @@
         height 1px
         background-color $line-shallow-clr 
     &  .article-header    
-        padding 1rem 1.5rem 0 
         & span
             color rgba(0,0,0,0.7)  
             font-size .825rem     
         & .article-title
             display block   
-            margin-bottom .5rem   
-            font-size 30px
+            font-size 23px
             font-weight 400 
             line-height 1.4
-            color #333
+            color #555
             &:link,&:visited,&:active 
                 color rgba(0,0,0,.75)
             &:hover
                 color $thr-clr
         & .article-meta  
+            margin 4px 0
             display flex
-            height 38px 
             align-items center
             font-size 0.7rem
             font-weight 400
             & > span
                 display inline-block
-                padding 8px 6px           
-            & > .article-tag        
-                @extend $item   
-                font-size 0.75rem  
-                &:link,&:visited,&:active 
-                    color rgba(0,0,0,.7)
-                &:hover
-                    color $thr-clr
-    & .article-excerpt
-        margin .4rem 1.4rem  
+                padding 8px 6px          
+    & .article-tags
+        & > .article-tag       
+            margin-right 6px
+            font-size 0.85rem  
+            text-decoration underline
+            &:link,&:visited,&:active 
+                color $thr-clr 
+            &:hover
+                color #555
+                
     & .article-excerpt 
+        margin 1rem 0
         & h1,& h2,& h3,& h4,& h5,& h6
             margin .8em 0 
             color #555
         & p
+            line-height 28px
             margin 0 0 .8em
             color #555
     & .article-bottom
         text-align center
-        margin 4rem auto 0 auto
+        margin 2rem auto 0 auto
         height 44px         
         & .article-readmore  
             @extend $fade      
