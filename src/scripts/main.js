@@ -9,7 +9,11 @@ import Hover from './hover.js'
 import Gallery from './gallery.js'
 
 import Lazyload from './lazyload'
-
+/**
+ * @author lemonreds
+ * @description 程序入口
+ * @time 2018
+ */
 const $ = require('expose-loader?$!./jquery.js')
 $(function () {
     (funcs => {

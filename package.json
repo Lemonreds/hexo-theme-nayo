@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-nayo",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "a concise theme for hexo",
   "main": "main.js",
   "scripts": {
