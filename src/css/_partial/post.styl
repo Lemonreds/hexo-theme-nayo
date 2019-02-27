@@ -1,21 +1,22 @@
-
-
 @import '../_import/valine.styl'
 
 .post-header
-  position relative 
+  padding-bottom 12px
   border-bottom 1px solid $line-clr 
-  & > .post-title 
-    margin 24px 0 10px
-    font-size 1.6rem
+.post-header-inner
+    padding-left 10px
+   
+.post-header-inner > .post-title 
+    margin-top 12px
+    font-size 1.55rem
     font-weight 400 
     line-height 1.4
     color #333
     @media mq-mobile 
       margin .8rem 0
-      font-size 1.75rem
-  & > .post-info
-    margin-bottom 6px
+      font-size 1.6rem
+.post-header-inner > .post-info
+    margin-top 10px
     & > span
       color #444
       margin-right 12px
@@ -90,12 +91,12 @@
 .-mob-share-weixin-qrcode-bg    
    background-color rgba(0,0,0,.003) !important 
 .-mob-share-weixin-qrcode-content
-   border 1px solid $line-clr !important
+   border 1px solid $line-shallow-clr  !important
 
 .post-footer
   overflow hidden
   padding 12px 0
-  border-bottom 1px solid $line-clr
+  border-bottom 1px solid $line-shallow-clr 
 .post-footer-meta 
   float left
   & > a
@@ -109,11 +110,10 @@
     text-align center
     border-radius 4px
     margin-right .5rem
-    border 1px solid $line-clr
+    border 1px solid $line-shallow-clr 
     transition all .25s ease-in-out 
     cursor pointer
-    &:hover
-      border 1px solid $thr-clr
+
     
  
 .post-footer-other,.post-footer-meta 
@@ -130,26 +130,28 @@
 
 .post-footer-nav
   overflow hidden
-  padding 3rem 0 2rem 
-  margin-bottom 3rem
-  border-bottom 1px solid $line-clr
+  padding 4rem 0 5rem
 
 .post-footer-link
-  @extend $oneline
-  width 50%
+  width 46%
+  margin 0 2%
   float left
-  margin-bottom 1.8rem
-  @media mobile 
-    float none
-    width 100%
-    diplay block 
-
+  @media mq-mobile
+    width 48%
+    margin 0 1%
 
 .post-nav-link-wrap
+  display block
+  padding 14px 6px
   text-decoration none
   text-shadow 0 1px #fff
   text-align center
-  display block
+  border 1px solid $line-shallow-clr 
+  border-radius 4px
+  box-shadow rgba(116, 129, 141, 0.05) 0px 2px 4px 0px
+  transition border 0.3s ease-in-out
+  &:hover
+      border 1px solid $thr-clr 
   @media mq-normal
     width 50%
     margin-top 0
@@ -159,8 +161,10 @@
   letter-spacing 2px
   line-height 1rem
   font-weight bold
+  color $gray-clr 
 
 .post-nav-title
+  @extend $oneline
   display block
   text-align center
   font-size 0.8rem

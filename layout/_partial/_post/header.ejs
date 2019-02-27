@@ -1,19 +1,20 @@
 <%# 文章页面头部 %>
 <div class="post-header">
-	<p class="post-title">	
-		<%= page.title|| __('Untitled') %>
-	</p>
-
-	<div class="post-info">	
-		<span class="post-info-entry">
-			<%= date(page.date,  "MMM DD, YYYY") %>
-		</span>
-
-		<%  var length = raw_length(post.content) %>
-		<% if ( length > 0 ){%>
-			<i class="iconfont icon-words"></i>
-			<span class="post-info-entry"><%= length %>
+	<div class="post-header-inner">
+		<p class="post-title">	
+			<%= page.title|| __('Untitled') %>
+		</p>
+		<div class="post-info">	
+			<span class="post-info-entry">
+				<%= date(page.date,  "MMM DD, YYYY") %>
 			</span>
-		<% }%>
+
+			<%  var length = raw_length(post.content) %>
+			<% if ( length > 0 ){%>
+				<i class="iconfont icon-words"></i>
+				<span class="post-info-entry"><%= length %>
+				</span>
+			<% }%>
+		</div>
 	</div>
 </div>

@@ -46,8 +46,9 @@
       <a href="<%- url_for(page.next.path) %>" id="post-nav-older" class="post-nav-link-wrap">
         <strong class="post-nav-caption"><%= __('Post.Prev') %></strong>
         <% var title = truncate(page.next.title, {length:60}) %>
-          <a class="post-nav-title" href="<%- url_for(page.next.path) %>" >
-          <%= title ||  __('Untitled') %></a>
+          <span class="post-nav-title">
+            <%= title ||  __('Untitled') %>
+          </span>
       </a>
   <% } %>
   </div>
@@ -56,8 +57,9 @@
         <a href="<%- url_for(post.prev.path) %>" id="post-nav-newer" class="post-nav-link-wrap">
           <strong class="post-nav-caption"><%= __('Post.Next') %></strong>
             <% var title = truncate(page.prev.title , {length:60}) %> 
-            <a class="post-nav-title" href="<%- url_for(page.prev.path) %>">
-            <%= title ||  __('Untitled') %></a>
+            <span class="post-nav-title">
+              <%= title ||  __('Untitled') %>
+            </span>
         </a>
     <% } %>
   </div>
