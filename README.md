@@ -6,9 +6,9 @@ a concise theme for hexo.
 
 ## Preview
 
-![Where is my image?](https://github.com/Lemonreds/hexo-theme-nayo/blob/master/src/nayo.jpg)
+![Where is my image?](https://github.com/Lemonreds/hexo-theme-nayo/blob/master/src/nayo.png)
 
-## Installation
+## Installation 
 
 1. Get Nayo from github 
 ```
@@ -27,17 +27,7 @@ theme: Nayo
 
 来自歌曲 <东京不太热> -封茗囧菌
 
-
-## Other
-
-有任何问题和建议欢迎 [Open an issue](https://github.com/Lemonreds/hexo-theme-Nayo/issues) 。
-
-当然如果你还能点个star的话 就非常的可爱和谢谢啦 :)
-
-
 ## Modify theme 
-
-0. 基于Webpack3,Jquery,Stylus,EJS和hexo文档
 
 1. install dependencies [安装Node依赖]
 ```
@@ -48,7 +38,9 @@ $ npm install
 $ npm run dev
 ```
 
-3. build once [打包一次文件] 
-```
-$ npm run build
-```
+
+## Other
+
+有任何问题和建议欢迎 [Open an issue](https://github.com/Lemonreds/hexo-theme-Nayo/issues) 。
+
+当然如果你还能点个star的话 就非常的可爱和谢谢啦 :)
