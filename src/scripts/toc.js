@@ -91,6 +91,6 @@ function getOffsetTop($obj) {
 
 function checkIsHideToc() {
 	const height = $(window).height(),
-		nav_height = $('.post-nav').offset().top - $(document).scrollTop();
+		nav_height = $('.post-footer-nav').offset().top - $(document).scrollTop();
 	return (nav_height <= height);
 }
