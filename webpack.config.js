@@ -1,86 +1,71 @@
- const path = require('path'),
-     webpack = require('webpack'),
-     ExtractTextPlugin = require('extract-text-webpack-plugin'),
-     CleanPlugin = require('clean-webpack-plugin');
+/**
+ * 
+ * webpack 4.0 配置文件
+ * @time 2019-03-28
+ */
 
- module.exports = {
-     entry: {
-         main: './src/scripts/main.js'
-     },
-     output: {
-         path: path.resolve(__dirname, 'source'),
-         filename: 'nayo.bundle.js'
-     },
-     module: {
-         rules: [{
-                 test: require.resolve('./src/scripts/jquery'),
-                 use: [{
-                     loader: 'expose-loader',
-                     options: '$'
-                 }]
-             },
-             {
-                 test: /\.js$/,
-                 use: {
-                     loader: 'babel-loader',
-                     options: {
-                         presets: ['es2015']
-                     }
-                 },
-                 exclude: /node_modules/
-             },
-             {
-                 test: /\.(styl|css)$/,
-                 use: ExtractTextPlugin.extract({
-                     fallback: 'style-loader',
-                     use: [{
-                             loader: 'css-loader',
-                             options: {
-                                 importLoaders: 2,
-                                 minimize: true
-                             }
-                         },
-                         {
-                             loader: 'postcss-loader',
-                             options: {
-                                 plugins: [require("autoprefixer")({
-                                     browsers: ['last 5 versions']
-                                 })]
-                             }
-                         },
-                         'stylus-loader'
-                     ]
-                 })
-             },
-             {
-                 test: /\.(png|jpg|gif)$/,
-                 use: [{
-                     loader: 'url-loader',
-                     options: {
-                         name: 'img/[name].[hash:4].[ext]',
-                         limit: 1024
-                     }
-                 }]
-             },
-             {
-                 test: /\.(woff|svg|eot|ttf)\??.*$/,
-                 use: {
-                     loader: 'file-loader',
-                     options: {
-                         name: 'fonts/[name].[hash:4].[ext]'
-                     }
-                 }
-             }
-         ]
-     },
-     plugins: [
-         new ExtractTextPlugin('nayo.min.css'),
-         new CleanPlugin('./source', {
-            // 一般图标不需要清空
-            exclude: ['images', 'fonts']
-            // exclude: ['images']
-         }),
-         new webpack.optimize.OccurrenceOrderPlugin(),
-         new webpack.optimize.UglifyJsPlugin()
-     ]
- }
+const path = require('path')
+const CleanPlugin = require('clean-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+
+const extractSass = new ExtractTextPlugin({
+    filename: "nayo.min.css"
+});
+
+
+module.exports = {
+    mode: 'development',
+    entry: './src/scripts/main.js',
+    output: {
+        path: path.resolve(__dirname, 'source'),
+        filename: 'nayo.bundle.js'
+    },
+    module: {
+        rules: [{
+            // ES6 
+            test: /\.js$/,
+            exclude: /(node_modules)/,
+            use: {
+                loader: "babel-loader"
+            }
+        }, {
+            // scss、sass
+            test: /\.(sass|scss)$/,
+            use: extractSass.extract({
+                fallback: 'style-loader',
+                use: ['css-loader', 'postcss-loader', 'sass-loader']
+            })
+        },  {
+            // 图片
+            test: /\.(png|jpg|gif)$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    name: 'img/[name].[hash:4].[ext]',
+                    limit: 1024
+                }
+            }]
+        }, {
+            // 字体,图标文件
+            test: /\.(woff|svg|eot|ttf)\??.*$/,
+            use: {
+                loader: 'url-loader',
+                options: {
+                    name: 'fonts/[name].[hash:2].[ext]',
+                    limit: 8192
+                }
+            }
+        }]
+    },
+    plugins: [       
+        new OptimizeCssAssetsPlugin(),
+        extractSass
+    ],
+    resolve: {
+        alias: {
+            '@scripts': path.resolve(__dirname, 'src/scripts/'),
+            '@styles': path.resolve(__dirname, 'src/styles/')
+        }
+    }
+}

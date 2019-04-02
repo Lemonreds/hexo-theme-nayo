@@ -1,80 +1,80 @@
-//-----------
-//slide-menu
-//-----------
-
-import Utils from './utils.js'
+import dom from '@scripts/dom'
+import Util from '@scripts/util'
+import Mask from '@scripts/mask'
 
 exports.init = () => {
 
-    if (!Utils.isPc) {
-        const $toggle = $('.mobile-toggle'),
-            $menuSearch = $('.mobile-menu-search');
-        let $mask;
+    if (!Util.isMobile()) return;
 
+    const _ = {
+        isShow: false,
+        toggle: '#mobile-toggle',
+        mobileMenu: '.mobile-menu',
 
-        $toggle.click(() => {
-            $mask = Utils.createMask();
-            showMenu();
-            for (let e of [$mask, $menuSearch]) {
-                e.click(() => {
-                    hideMenu();
-                })
-            }
-        })
+        header: '.mobile-header-wrapper',
+        container: '.container',
+        footer: '.footer',
+
+        menuShowClass: 'menuIn',
+        menuHideClass: 'menuOut',
+
+        pageShowClass: 'slideIn',
+        pageHideClass: 'slideOut',
+
+        hideToggleClass: 'icon-no-menu',
+        showToggleClass: 'icon-menu',
     }
-}
-//
-// style in header.styl
-//
-const showMenu = function ($icon = $('.mobile-toggle'), $mask = $('.page-mask')) {
 
-    $icon
-        .removeClass('icon-menu')
-        .addClass('icon-no-menu');
-
-    $('.mobile-menu')
-        .show()
-        .removeClass('menuSlideOut')
-        .addClass('menuSlideIn');
-
-    $('.header')
-        .removeClass('slide-left')
-        .addClass('slide-right');
-
-    $('.container')
-        .removeClass('slide-left')
-        .addClass('slide-right');
-
-    $('#footer')
-        .removeClass('slide-left')
-        .addClass('slide-right');
-
-
-    $mask.show();
-}
+    const toggle = dom.query(_.toggle)
+    const mobileMenu = dom.query(_.mobileMenu)
+    const pageNodes = [dom.query(_.header), dom.query(_.container), dom.query(_.footer)]
 
 
 
-const hideMenu = function ($icon = $('.mobile-toggle'), $mask = $('.page-mask')) {
+    mobileMenu.addEventListener('click', hideMobileMenu)
 
-    $icon
-        .removeClass('icon-no-menu')
-        .addClass('icon-menu');
+    toggle.addEventListener('click', () => {
+        _.isShow ? hideMobileMenu() : showMobileMenu()
+    })
 
-    $('.mobile-menu')
-        .removeClass('menuSlideIn')
-        .addClass('menuSlideOut');
 
-    $('.header')
-        .removeClass('slide-right')
-        .addClass('slide-left');
-    $('.container')
-        .removeClass('slide-right')
-        .addClass('slide-left');
+    function hideMobileMenu() {
+        Mask.hide()
 
-    $('#footer')
-        .removeClass('slide-right')
-        .addClass('slide-left');
+        toggle.addClass(_.showToggleClass)
+            .removeClass(_.hideToggleClass)
 
-    $mask.remove();
+
+        pageNodes.forEach(node => {
+            node.addClass(_.pageShowClass)
+                .removeClass(_.pageHideClass)
+        })
+
+
+        mobileMenu.addClass(_.menuHideClass)
+            .removeClass(_.menuShowClass)
+
+        _.isShow = false
+    }
+
+
+    function showMobileMenu() {
+        Mask.show()
+
+
+        toggle.addClass(_.hideToggleClass)
+            .removeClass(_.showToggleClass)
+
+        pageNodes.forEach(node => {
+            node.addClass(_.pageHideClass)
+                .removeClass(_.pageShowClass)
+        })
+
+
+        mobileMenu.addClass(_.menuShowClass)
+            .removeClass(_.menuHideClass)
+
+        _.isShow = true
+    }
+
 }

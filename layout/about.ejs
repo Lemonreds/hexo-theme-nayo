@@ -1,4 +1,11 @@
 <section class="fadeIn slideDownMin">
-	<span class="page-title"><%- __('Page.About') %></span>
-	<div class="typo"><%- page.content %></div>
+
+	<% var name =  __('Page.About') %>
+  	<%- partial('_partial/page-name',{icon:'icon-page-about',name: name }) %>
+
+
+	<div class="typo">
+		<%- page.content %>
+	</div>
+
 </section>

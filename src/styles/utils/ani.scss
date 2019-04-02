@@ -1,0 +1,168 @@
+@keyframes leftIn {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.leftIn {
+    animation: leftIn 0.6s ease-in-out forwards;
+}
+
+@keyframes rightOut {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+
+.rightOut {
+    animation: rightOut 0.6s ease-in-out forwards;
+}
+
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+
+.slideUp {
+    animation: slideUp 0.5s ease-in-out forwards;
+}
+
+
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slideDown {
+    animation: slideDown 0.5s ease-in-out forwards;
+}
+
+
+
+
+@keyframes slideDownMin {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0.1
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+
+.slideDownMin {
+    animation: slideDownMin 0.5s ease-in-out forwards;
+}
+
+
+
+@keyframes sildeUpMin {
+    0% {
+        transform: translateY(10px);
+        opacity: 0.1
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.sildeUpMin {
+    animation: sildeUpMin 0.5s ease-in-out forwards;
+}
+
+
+
+
+
+
+@keyframes menuIn {
+    0% {
+        transform: translateX(-200px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.menuIn {
+    animation: menuIn 0.5s ease-in-out forwards;
+}
+
+
+@keyframes menuOut {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-200px)
+    }
+}
+
+.menuOut {
+    animation: menuOut 0.5s ease-in-out forwards;
+}
+
+
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(200px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.slideIn {
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(200px)
+    }
+}
+
+.slideOut {
+    animation: slideOut 0.5s ease-in-out forwards;
+}

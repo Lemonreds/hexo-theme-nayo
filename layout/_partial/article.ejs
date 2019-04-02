@@ -4,11 +4,11 @@
 	   
 	<div class="article-header">
 	    
-		<a  class="article-title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled') %></a>  
+		<a  class="title" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled') %></a>  
 	       
 		 <%	var date_format = config.date_format %>
 
-		<div class='article-meta'>
+		<div class='meta'>
 			<time><%= date(post.date,  "MMM DD, YYYY") %></time>			
 		</div>
 	</div>
@@ -33,13 +33,13 @@
 		<%if(post.tags && post.tags.length){%>
 			<i class="iconfont icon-tags" style="margin-right:4px"></i>
 			<% post.tags.sort('date',-1).each(function (tag){%>            
-				<a class="article-tag" href="<%- url_for(tag.path) %>"><%- tag.name %></a>           
+				<a class="tagLink" href="<%- url_for(tag.path) %>"><%- tag.name %></a>           
 			<% })%>
 		<%}%>
 	</div>
 
 	<div class='article-bottom'>
-		<a class="article-readmore" href="<%- url_for(post.path) %>"><%= __('ReadMore') %></a> 	
+		<a class="readmore" href="<%- url_for(post.path) %>"><%= __('ReadMore') %></a> 	
 	</div>	
     
 </article>

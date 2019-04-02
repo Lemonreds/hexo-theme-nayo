@@ -1,24 +1,26 @@
-import Stlye from '../css/style.styl'
-import Index from './index.js'
-import Anm from './animate.js'
-import Mobile from './mobile.js'
-import Search from './search.js'
-import Post from './post.js'
-import Hover from './hover.js'
+require('@scripts/extends')
+require('@styles/styles.scss')
 
-import Gallery from './gallery.js'
+import {
+    addLoadEvent
+} from '@scripts/dom'
+import Lazyload from '@scripts/lazyload'
+import Totop from '@scripts/totop'
+import ActiveNav from '@scripts/activeNav'
+import Header from '@scripts/header'
+import Search from '@scripts/search'
+import Mobile from '@scripts/mobile'
 
-import Lazyload from './lazyload'
-/**
- * @author lemonreds
- * @description 程序入口
- * @time 2018
- */
-const $ = require('expose-loader?$!./jquery.js')
-$(function () {
-    (funcs => {
-        for (let fn of funcs) {
-            fn.init()
-        }
-    })([Index, Mobile, Search, Anm, Post, Lazyload, Hover, Gallery])
+
+addLoadEvent(() => {
+
+    const funcs = [ActiveNav, Header, Lazyload, Totop, Search, Mobile]
+
+    for (let fn of funcs) {
+        fn.init()
+    }
 })
+
+// JUST SAY HELLO WORLD.
+console.log('Hexo Theme Nayo, By Lemonreds.')
+console.log('@see [https://github.com/Lemonreds/hexo-theme-nayo]')

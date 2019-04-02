@@ -1,5 +1,7 @@
-# header nav
+# header navigation
 # 导航菜单路径
+# 默认不需要修改
+
 menu:
   home: /
   archives: archives
@@ -10,35 +12,31 @@ menu:
 
 # site title 
 # 网站的标题
-# title为空时 Hexo/_config.yml 配置有效
-title: Lemon's blog
+title: Lemon
 
 # author profile
-# 图片放置于主题目录下: source/imgaes/
-# 作者信息
+# 图片放置于主题目录下: source/images/
 # author为空时 Hexo/_config.yml 配置有效
 profile: 
   author: Lemon
   logo: /images/logo.png
-  avatar: /images/header.jpg  
+  avatar: /images/avatar.jpg  
 
 # site favicon
-# 图片放置于主题目录下: source/imgaes/
+# 图片放置于主题目录下: source/images/
 # 站点图标
 favicon: /images/favicon.png
 
 # social link
-# 更多链接
 social:  
   Github: https://github.com/Lemonreds/hexo-theme-nayo 
-  Weibo: 
-#  Zhihu:
-  Facebook:
-#  Twitter:
-  Instagram:
-#  LinkedIn:
-  Neteasemusic:
-#  Csdn: 
+  Weibo: https://weibo.com/liminghong2
+  #Zhihu:
+  #Facebook:
+  #Twitter:
+  #Instagram:
+  #LinkedIn:
+  #Neteasemusic:
 
 
 # site analytics 
@@ -52,12 +50,12 @@ google_analytics:
 # 评论系统
 
 # disqus(https://disqus.com/)
-# 填入shortname即可
+# 填入注册好的shortname即可
 disqus:
-  comment: false
+  comment: true
   shortname: lemonreds
 
-# valine(https://github.com/xCss/Valine)
+# 基于 valine(https://github.com/xCss/Valine)
 # 创建 leancloud 应用 获取 id|key 填入即可
 leancloud:  
   comment: false
@@ -65,36 +63,23 @@ leancloud:
   app_key: oh9tizsnvV2vNvWgqEvoNtQO
 
 
-# 支持的分享类型
-share_item:
-- qq
-- weixin
-- weibo
-- douban
-- facebook
-- twitter
-#- tumblr
-- google
-
-# donate
-# 捐赠功能
-# 图片放置于主题目录下: source/imgaes/
-donate:
-  enable: false
-  word: 世界美好 你也是
-  wechat: /images/donate1.png
-  alipay: /images/donate2.png
-
-# mob share(http://www.mob.com)
+# 基于 mob(http://www.mob.com)
 # 文章分享功能
 mob_share:
   true
 
-# toc
-# 全局控制文章的概要是否显示
-# 可以在单个文章设置是否显示toc (参见下方说明)
-toc:
-  false
+# 文章分享链接
+share_item:
+- qq
+- weixin
+- weibo
+#- douban
+#- tumblr
+#- facebook
+#- twitter
+#- google
+
+
 
 # mathjax 
 # 渲染LateX公式
@@ -103,7 +88,7 @@ toc:
 mathjax:
   enable: true
   
-# 在你的文章头部支持的配置有:
+  # 文章头部支持的配置有:
   # example:
   # ---
   # title: hexo-theme-nayo
@@ -130,9 +115,4 @@ mathjax:
 # 网站底部信息
 footer:
   author: Lemon
-  since: 2018
-
-
-# theme version
-version:
-  0.3.7
+  since: 2019

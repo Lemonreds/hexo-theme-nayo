@@ -1,0 +1,46 @@
+#comment {
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    position: relative;
+    border: none;
+}
+
+
+.power,
+.vempty,
+.col-60 {
+    visibility: hidden
+}
+
+.vnick,
+.veditor,
+.vmail,
+.vempty,
+.vsubmit {
+    font-size: 1rem;
+    border: none !important;
+}
+
+
+.vsubmit {
+    background-color: #F5F6FA !important;
+    color: rgba(0, 0, 0, .5) !important;
+    font-weight: 300 !important;
+    letter-spacing: .3px;
+    border: 1px solid transparent !important;
+
+    &:hover {
+        color: $c-hover !important;
+        border: 1px solid $c-hover !important;
+    }
+
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.vcard {
+    padding: 5px 0 0 20px !important
+}

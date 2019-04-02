@@ -1,0 +1,19 @@
+.footer {
+    width: 100%;
+    margin: 10vh 0 5vh;
+    color: #797f86;
+    text-align: center;
+    .inner {
+        margin: 0 auto;
+        height: 100%;
+
+        .copyright {
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 2;
+            a {
+               @extend .hover
+            }
+        }
+    }
+}

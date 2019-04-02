@@ -1,4 +1,9 @@
 
+/**
+ * 
+ * POST LENGTH
+ * 
+ */
 
 hexo.extend.helper.register('raw_length', function (string) {
     

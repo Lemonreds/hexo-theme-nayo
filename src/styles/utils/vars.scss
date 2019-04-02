@@ -1,0 +1,58 @@
+$c-shallow-line: #f1f1f1;
+$c-deep-line :#ddd;
+$c-hover: #e26d6d;
+$c-black: #555;
+$c-gray : #727272;
+
+@mixin hover($beforeColor, $afterColor) {
+    color: $beforeColor;
+
+    &:hover {
+        color: $afterColor;
+    }
+
+    transition: color 0.2s ease-in-out;
+}
+
+.hover {
+    @include hover($c-hover, $c-black)
+}
+
+.hoverReverse {
+    @include hover($c-black, $c-hover)
+}
+
+.hoverOpacity {
+    opacity: 0.95;
+
+    &:hover {
+        color: 0.65;
+    }
+
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+}
+
+
+.clearfix {
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both
+    }
+}
+
+.textOverflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

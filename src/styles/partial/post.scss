@@ -1,0 +1,143 @@
+@import "~@styles/three/valine.scss";
+
+.post {    
+
+    .header {
+        padding-bottom: 12px;
+        border-bottom: 1px solid $c-shallow-line;
+
+        .title {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 1.55rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: #333
+        }
+
+        .info {
+            margin-top: 10px;
+
+            time,
+            span {
+                color: #666;
+                margin-right: 12px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .post-content{
+        margin: 2.5rem 0;
+    }
+
+    .bottom {
+
+        .other {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+            border-top: 1px solid $c-shallow-line;
+            border-bottom: 1px solid $c-shallow-line;
+
+            .meta {
+
+                .category-link,
+                .tag-link {
+                    @extend .hover;
+                    font-size: 0.95rem;
+                    margin-right: 4px;
+                    text-decoration: underline;
+                }
+            }
+
+            .operate {
+                display: flex;
+                align-items: center;
+
+                .text {
+                    font-size: 12px;
+                    color: gray;
+                    margin: 0 10px;
+                    text-transform: uppercase
+                }
+
+
+                .share {
+                    list-style: none;
+
+                    .item {
+                        @extend .hoverReverse;
+                        display: inline-block;
+                        margin-right: 6px;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+
+
+        .nav {
+            @extend .clearfix;
+            padding: 3rem 0;
+
+            border-bottom: 0.5px solid $c-shallow-line;
+
+            .link {
+                width: 46%;
+                margin: 0 2%;
+                float: left;
+
+                .link-wrap {
+                    @extend .hoverReverse;
+                    display: block;
+                    padding: 14px 6px;
+                    text-decoration: none;
+                    text-shadow: 0 1px #fff;
+                    text-align: center;
+
+                    .caption {
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        line-height: 1rem;
+                        font-weight: blod;
+                        color: gray;
+                    }
+
+                    .title {
+                        display: block;
+                        text-align: center;
+                        font-size: 1rem;
+                        margin-top: 1.5rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
+    .comment {
+        margin-top: 1rem;
+    }
+
+    .gallery {
+        margin: 0 2px;
+        display: flex;
+
+        .image {
+            width: 230px;
+            height: 220px;
+            margin: 0 0.1rem;
+            padding: 4px;
+            border: 1px solid $c-shallow-line;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    }
+}

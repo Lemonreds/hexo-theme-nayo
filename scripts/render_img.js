@@ -3,6 +3,12 @@ let cheerio = require('cheerio'),
     placeHolder = '/images/placeholder.png';
 
 
+/**
+ * 
+ * 
+ * LAZYLOAD
+ * 
+ */
 function renderImg(source) {
 
     let $ = cheerio.load(source, {

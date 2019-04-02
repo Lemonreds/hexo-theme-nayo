@@ -1,0 +1,22 @@
+.items {
+    .item {
+        display: flex;
+        align-items: center;
+        margin: 2rem 2rem;
+
+        .time {
+            width: 30%;
+            padding-left: 36px;
+            font-size: 0.9rem;
+            color: rgba(0, 0, 0, 0.65);
+            text-align: center;
+        }
+
+        .title {
+            @extend .hoverReverse;
+            width: 70%;
+            font-size: 1.05rem;
+            text-align: left;
+        }
+    }
+}

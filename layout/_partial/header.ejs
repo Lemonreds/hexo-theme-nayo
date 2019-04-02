@@ -1,32 +1,33 @@
-<header class="header">
-	
-  <nav class="header-inner">        
+<header class="header-wrapper">
 
-    <span class="iconfont icon-menu mobile-toggle"></span>   	
-
-    <div class="header-logo">
+  <nav class="inner">
+    <div class="title">
       <a href="/">
-        <img class="header-logo-img" src="<%- url_for(theme.profile.logo) %>"/>
+        <img class="logo" src="<%- url_for(theme.profile.logo) %>" />
       </a>
     </div>
 
-    <div class="header-menu">          
-        <% for (var i in theme.menu){ %>      
-          <% if ( i  == 'search' ){%>
-              <a class="header-menu-link"  id="header-menu-search">
-                <i class="iconfont icon-<%-i %>" />  
-              </a>
-          <% } else {%>
-            <a 
-            class="header-menu-link" 
-            id="header-menu-<%-i%>" 
-            href="<%- url_for(theme.menu[i]) %>">
-              <i class="iconfont icon-<%-i %>" />  
-            </a>     
-          <% } %>
-        <% } %>          
-    </div>  
-    
+    <ul class="menu">
+      <% for (var i in theme.menu){ %>
+      <% if ( i  == 'search' ){%>
+      <li class="item">
+        <a class="link" id="menu-search">
+          <i class="iconfont icon-<%-i %>" />
+        </a>
+        </l>
+
+        <% } else {%>
+      <li class="item">
+        <a class="link" id="menu-<%-i%>" href="<%- url_for(theme.menu[i]) %>">
+          <i class="iconfont icon-<%-i %>" />
+        </a>
+      </li>
+      <% } %>
+      <% } %>
+    </ul>
   </nav>
 </header>
 
+<header class="mobile-header-wrapper">
+  <i id="mobile-toggle" class="iconfont icon-menu mobile-toggle"></i>
+</header>

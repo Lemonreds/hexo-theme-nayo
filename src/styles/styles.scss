@@ -1,0 +1,26 @@
+@import "~@styles/utils/reset.scss";
+@import "~@styles/utils/vars.scss";
+@import "~@styles/utils/typo.scss";
+@import "~@styles/utils/ani.scss";
+@import "~@styles/iconfont.scss";
+@import "~@styles/base.scss";
+
+// code themse
+@import "~@styles/code/hightlight.scss";
+
+
+@import '~@styles/partial/header.scss';
+@import '~@styles/partial/footer.scss';
+@import '~@styles/partial/index.scss';
+@import '~@styles/partial/paginator.scss';
+@import '~@styles/partial/archive.scss';
+@import '~@styles/partial/tag.scss';
+@import '~@styles/partial/item.scss';
+@import '~@styles/partial/page-name.scss';
+@import '~@styles/partial/post.scss';
+@import '~@styles/partial/search.scss';
+// @import '~@styles/partial/toc.scss';
+
+@media screen and (max-width: 479px) {
+    @import '~@styles/mobile/mobile.scss';
+}

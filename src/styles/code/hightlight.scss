@@ -1,0 +1,308 @@
+@import "./theme.scss";
+
+.codeBlock {
+    overflow: auto;
+    margin: 20px 0;
+    padding: 0;
+    font-size: $code-font-size;
+    color: $highlight-foreground;
+    background: $highlight-background;
+    line-height: $line-height-code-block;
+    letter-spacing: $code-letter-spacing;
+}
+
+pre,
+code {
+    font-family: $code-font-family;
+}
+
+code {
+    padding: 4px 6px;
+    word-wrap: break-word;
+    color: $code-foreground;
+    background: $highlight-background;
+    border-radius: 2px;
+    font-size: $code-font-size;
+}
+
+pre {
+    @extend .codeBlock;
+    padding: 10px;
+
+    code {
+        padding: 0;
+        color: $highlight-foreground;
+        background: none;
+        text-shadow: none;
+    }
+}
+
+.highlight {
+    @extend .codeBlock;
+    // Read values from NexT config and set they as local variables to use as string variables (in any CSS section). 
+    border-radius: 4px;
+    border: .5px solid $highlight-border-color;
+
+    pre {
+        border: none;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    table {
+        margin: 0;
+        width: auto;
+        border: none;
+    }
+
+    td {
+        border: none;
+        padding: 0;
+    }
+
+    figcaption {
+        @extend .clearfix;
+        font-size: 1em;
+        color: $highlight-foreground;
+        line-height: 1em;
+        margin-bottom: 1em;
+        margin: 0em;
+        padding: 0.5em;
+        background: $highlight-background;
+        border-bottom: 1px solid #e9e9e9;
+
+        a {
+            float: right;
+            color: $highlight-foreground;
+
+            &:hover {
+                border-bottom-color: $highlight-foreground;
+            }
+        }
+    }
+
+    .gutter pre {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: $highlight-gutter-color;
+        text-align: right;
+        background-color: $highlight-gutter-bgcolor;
+    }
+
+    .code pre {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: $highlight-background
+    }
+
+    .line {
+        line-height: 23px;
+    }
+}
+
+
+.gutter {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.gist table {
+    width: auto;
+
+    td {
+        border: none;
+    }
+}
+
+// For diff highlight
+pre .deletion {
+    background: $highlight-deletion;
+}
+
+pre .addition {
+    background: $highlight-addition;
+}
+
+pre .meta {
+    color: $highlight-purple;
+}
+
+.code pre {
+
+    .comment {
+        color: $highlight-comment;
+    }
+
+    .variable,
+    .attribute,
+    .tag,
+    .regexp,
+    .ruby,
+    .constant,
+    .xml,
+    .tag,
+    .title,
+    .xml,
+    .pi,
+    .xml,
+    .doctype,
+    .html,
+    .doctype,
+    .css,
+    .id,
+    .css,
+    .class,
+    .css,
+    .pseudo {
+        color: $highlight-red;
+    }
+
+    .number,
+    .preprocessor,
+    .built_in,
+    .literal,
+    .params,
+    .constant,
+    .command {
+        color: $highlight-orange;
+    }
+
+    .ruby,
+    .class,
+    .title,
+    .css,
+    .rules,
+    .attribute,
+    .string,
+    .value,
+    .inheritance,
+    .header,
+    .ruby,
+    .symbol,
+    .xml,
+    .cdata,
+    .special,
+    .number,
+    .formula {
+        color: $highlight-green;
+    }
+
+    .title,
+    .css,
+    .hexcolor {
+        color: $highlight-aqua;
+    }
+
+    .function,
+    .python,
+    .decorator,
+    .python,
+    .title,
+    .ruby,
+    .function,
+    .title,
+    .ruby,
+    .title,
+    .keyword,
+    .perl,
+    .sub,
+    .javascript,
+    .title,
+    .coffeescript,
+    .title {
+        color: $highlight-blue;
+    }
+
+    .keyword,
+    .javascript,
+    .function {
+        color: $highlight-purple;
+    }
+}
+
+
+.highlight {
+    position: relative;
+    width: 100%;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #ccc;
+        content: "Code";
+        font-size: 12px;
+        padding: 5px 10px 0;
+        height: 15px;
+        ;
+    }
+}
+
+.html:after {
+    content: "HTML"
+}
+
+.javascript:after {
+    content: "Javascript"
+}
+
+.js:after {
+    content: "Javascript"
+}
+
+.shell:after {
+    content: "Shell"
+}
+
+.css:after {
+    content: "CSS"
+}
+
+.vue:after {
+    content: "Vue"
+}
+
+.sass:after {
+    content: "SASS"
+}
+
+.less:after {
+    content: "LESS"
+}
+
+.styl:after {
+    content: "Styl"
+}
+
+.java:after {
+    content: "Java"
+}
+
+
+.c:after {
+    content: "C"
+}
+
+.yml:after {
+    content: 'YML'
+}
+
+.php:after {
+    content: 'PHP'
+}
+
+p code {
+    padding: 4px;
+    font-size: $code-font-size;
+    color: $highlight-foreground;
+    background: $highlight-background;
+    border: .5px solid $highlight-border-color;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}

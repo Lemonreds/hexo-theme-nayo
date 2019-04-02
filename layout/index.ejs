@@ -1,29 +1,36 @@
-
 <%# profile %>
 
-<% var profile = theme.profile %>
 
-<div class="profile sildeUpMin">
-	
-		<img class="avatar"src="<%- url_for(profile.avatar) %>">
+<div class="index slideDownMin">
+	<% var profile = theme.profile %>
+
+	<div class="profile">
+
+		<img class="avatar" src="<%- url_for(profile.avatar) %>">
 
 		<p class="author"><%= profile.author || config.author %></p>
-		
+
 		<div class="social">
-   		<% for (var i in theme.social) { %>      	
-			<a target="_blank" class="social-links" href="<%- (theme.social[i]) %>" >		
+			<% var index = 0 %>
+			<% for ( i in theme.social) { %>
+			<a target="_blank" class="links" href="<%- (theme.social[i]) %>">
 				<i class="iconfont icon-<%= i %>" />
-			</a>	
-	    <% } %>
-    	</div>		
+			</a>
+			<% ++index %>
+			<% } %>
+		</div>
+	</div>
+
+
+	<%# article %>
+
+	<% page.posts.sort('date', -1).each(function (post) { %>
+	<% if (post.raw.length > 0 ) {%>
+	<%- partial('_partial/article',{post:post}) %>
+	<% }%>
+	<% }) %>
+
+	<%# paginator %>
+	<%- partial('_partial/paginator') %>
+	<%- partial('_partial/_post/mathjax',{}) %> 
 </div>
-
-<%# article %>
-<% page.posts.sort('date', -1).each(function (post) { %>    	  	
-  		<% if (post.raw.length > 0 ) {%>
-    			<%- partial('_partial/article',{post:post}) %>     
-     	<% }%>
-<% }) %>
-
-<%# paginator %>
-<%- partial('_partial/paginator') %>

@@ -1,26 +1,34 @@
 <section>
+
+  <% var name =  __('Page.Tags') %>
+  <%- partial('_partial/page-name',{icon:'icon-page-tags',name: name }) %>
+
   <% if( is_tag()){ %>
 
-      <span  class="page-title"><%= "# " + page.tag %></span>   
-        
-        <% page.posts.each(function (post) { %>     
+        <div class="items">
+            <% page.posts.each(function (post) { %>     
 
-            <%- partial('_partial/item',{post: post}) %>       
+                <%- partial('_partial/item',{post: post}) %>       
 
-        <% })%>
+            <% })%>
+        </div>
+
 
     <%} else {%>    
-      
-        <span class="page-title"><%=  __('Page.Tags') %></span> 
-        
+    
+
+        <ul class="tag">
         <% site.tags.sort('date',-1).each( function (tag){%>
-            
-            <a class="tag-wrap slideDownMin" href="<%- url_for(tag.path) %>">    
-               <span class="iconfont icon-tag-inner"></span>           
-               <span class="tag-name"> <%- tag.name %> </span>
-               <span class="tag-count"><%- tag.length %></span>  
-             </a>
+            <li class="tag-item">
+                <a class="tag-wrap slideDownMin" href="<%- url_for(tag.path) %>">    
+                    <span class="iconfont icon-tag-inner"></span>           
+                    <span class="tag-name"> <%- tag.name %> </span>
+                    <span class="tag-count"><%- tag.length %></span>  
+                </a>
+            </li>
         <% })%>
+
+        </ul>
 
     <%}%>
 </section>

@@ -1,0 +1,155 @@
+.typo {
+    font-size: 15px;
+    line-height: 2;
+    color: #0d0d0d;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 2rem 0 .8rem 0;
+        padding: 0;
+        font-weight: 500;
+        color: #333;
+    }
+
+    h1 {
+        font-size: 36px
+    }
+
+    h2 {
+        font-size: 32px
+    }
+
+    h3 {
+        font-size: 26px
+    }
+
+    h4 {
+        font-size: 19px
+    }
+
+    h5,
+    h6 {
+        font-size: 16px
+    }
+
+    strong {
+        font-weight: 500
+    }
+
+    hr {
+        margin-top: 22px;
+        border: none;
+        border-top: 1px solid rgba(102, 130, 153, 0.1)
+    }
+
+    p {
+        line-height: 30px;
+        margin-bottom: 14px;
+        color: #232323
+    }
+
+    img {
+        box-sizing: border-box;
+        margin: 1rem 0;
+    }
+
+    del {
+        opacity: 0.5;
+    }
+
+    ul,
+    ol {
+        margin: 12px 0;
+        padding-left: 16px;
+
+        p {
+            margin: 0;
+        }
+
+        & li {
+            margin: 4px 0;
+            padding-left: 8px;
+        }
+    }
+
+    ul li {
+        list-style: none;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "•";
+            top: 0px;
+            left: -16px;
+            font-size: 17px;
+            color: #333
+        }
+    }
+
+    ol li {
+        list-style: decimal
+    }
+
+    a {
+        @extend .hover;
+        font-size: 0.9rem;
+        text-decoration: underline;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    blockquote {
+        display: block;
+        letter-spacing: .4px;
+        font-size: 15px;
+        padding: 0 12px;
+        margin: 2rem 0;
+
+        p {
+            margin: 0;
+            padding-left: 10px;
+            border-left: 3px solid #eee;
+        }
+    }
+
+
+
+    table {
+        margin: 16px 0;
+        word-wrap: break-word;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-radius: 2px;
+
+        tr:nth-child(even) {
+            background: #fafafa
+        }
+
+        th {
+            font-weight: 500
+        }
+
+        th,
+        td {
+            border: 1px solid #f1f1f1;
+            padding: 0.4rem 1rem;
+            margin: 28px 0;
+        }
+
+
+        dt,
+        dd {
+            margin-bottom: 10px;
+        }
+
+
+    }
+
+    figure th,
+    figure td {
+        border: none;
+    }
+}

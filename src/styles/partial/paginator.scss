@@ -1,0 +1,50 @@
+.paginator {
+    margin: 8rem 0;
+    padding: 0 1rem;
+    text-align: center;
+    color: $c-gray;
+    font-size: 0.825rem;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+
+    .prev,
+    .next {
+        position: absolute;
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 1px solid $c-shallow-line;
+        line-height: 2;
+        &:hover {
+            color: $c-hover;
+            border: 1px solid $c-hover;
+        }
+
+        transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+    }
+
+    .prev {
+        left: 2px;
+    }
+
+    .next {
+        right: 2px;
+    }
+
+    .page-number {
+        font-size: 14px;
+        padding: 6px 2px;
+        height: 40px;
+        line-height: 40px;
+
+        strong {
+            color: $c-hover;
+            font-size: 1rem;
+        }
+    }
+}

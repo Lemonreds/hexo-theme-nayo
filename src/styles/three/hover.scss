@@ -1,0 +1,11 @@
+$inactive-color : #747474;
+
+.inactive-item {
+    color: $inactive-color !important;
+
+    &:link,
+    &:visited,
+    &:active {
+        color: $inactive-color !important;
+    }
+}

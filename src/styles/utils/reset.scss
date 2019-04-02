@@ -1,0 +1,58 @@
+/**
+*   重置css样式
+*/
+
+html {
+    font-family: sans-serif;
+    background: transparent;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+input,
+select,
+textarea {
+    border: 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+a {
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    padding: 4px;
+    opacity: 0.95;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}

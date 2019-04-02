@@ -1,12 +1,10 @@
 <% if(theme.toc && !page.hide_toc ){  %>
-	<div class="toc-container">
-			<div class="toc-sidebar">
-			<p class="toc-title">
-				<%= __('Contents')%>
-			</p>
-			<div class="toc-list">
-				<%- toc(page.content,{class:'toc-inner' , list_number:false}) %>
-			</div>
-		</div>
+<div class="toc">
+	<p class="toc-title">
+		<%= __('Contents')%>
+	</p>
+	<div class="toc-list">
+		<%- toc(page.content,{class:'toc-inner' , list_number:false}) %>
 	</div>
+</div>
 <% } %>

@@ -1,0 +1,21 @@
+.tag {
+    .tag-item {
+        list-style: none;
+        display: inline-block;
+        margin-right: 1.8rem;
+
+        .tag-wrap {
+            @extend .hoverReverse;
+            text-decoration: underline;
+
+            .tag-name {
+                font-size: 0.95rem;
+            }
+
+            .tag-count {
+                color: $c-hover;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

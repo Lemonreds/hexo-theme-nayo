@@ -1,68 +1,59 @@
-<div class="post-footer">
-
-<% if(theme.donate.enable || theme.mob_share ){  %>
-  <div class="post-footer-other">
-    <% if(theme.donate.enable){  %>
-      <span class="post-footer-item">
-        <%- partial('_partial/_post/donate') %> 
-      </span>        
-    <% } %>   
-    <% if(theme.mob_share){%>
-      <span class="post-footer-item">
-        <%- partial('_partial/_post/mob_share') %>
-      </span>  
-    <% } %>           
-  </div>  
-<% } %>    
-
-
-  <div class="post-footer-meta">
-        <% if( page.categories && page.categories.length > 0 ) {%>
-          <i class="iconfont icon-category"></i>       
-          <%-  list_categories( page.categories ,{
+<div class="bottom">
+  <div class="other">
+    <div class="meta">
+      <% if( page.categories && page.categories.length > 0 ) {%>
+      <i class="iconfont icon-category"></i>
+      <%-  list_categories( page.categories ,{
             show_count:false,
             style:'none',
             separator:" "    
-          }) %> 	
-      
-        <% }%>	
+          }) %>
 
-        <% if( page.tags &&  page.tags.length > 0 ) {%>
-          <i class="iconfont icon-tag"></i>     
-            <%- list_tags( page.tags ,{
+      <% }%>
+
+      <% if( page.tags &&  page.tags.length > 0 ) {%>
+      <i class="iconfont icon-tag"></i>
+      <%- list_tags( page.tags ,{
             show_count:false,
             style:'none',
             separator:" "      
-            }) %>    
-        <% }%>	
+            }) %>
+      <% }%>
+    </div>
+
+    <div class="operate">
+      <% if(theme.mob_share){%>
+      <span class="text">Share</span>
+      <%- partial('_partial/_post/mob_share') %>
+      <% } %>
+    </div>
   </div>
 
-</div>
 
-<% if (page.prev || page.next){ %>
-<nav class="post-footer-nav">
-  <div class="post-footer-link">
-  <% if (page.next){ %>
-      <a href="<%- url_for(page.next.path) %>" id="post-nav-older" class="post-nav-link-wrap">
-        <strong class="post-nav-caption"><%= __('Post.Prev') %></strong>
+  <% if (page.prev || page.next){ %>
+  <nav class="nav">
+    <div class="link">
+      <% if (page.next){ %>
+      <a href="<%- url_for(page.next.path) %>" class="link-wrap">
+        <strong class="caption"><%= __('Post.Prev') %></strong>
         <% var title = truncate(page.next.title, {length:60}) %>
-          <span class="post-nav-title">
-            <%= title ||  __('Untitled') %>
-          </span>
+        <span class="title">
+          <%= title ||  __('Untitled') %>
+        </span>
       </a>
+      <% } %>
+    </div>
+    <div class="link">
+      <% if (page.prev){ %>
+      <a href="<%- url_for(post.prev.path) %>" class="link-wrap">
+        <strong class="caption"><%= __('Post.Next') %></strong>
+        <% var title = truncate(page.prev.title , {length:60}) %>
+        <span class="title">
+          <%= title ||  __('Untitled') %>
+        </span>
+      </a>
+      <% } %>
+    </div>
+  </nav>
   <% } %>
-  </div>
-  <div class="post-footer-link">
-    <% if (page.prev){ %>
-        <a href="<%- url_for(post.prev.path) %>" id="post-nav-newer" class="post-nav-link-wrap">
-          <strong class="post-nav-caption"><%= __('Post.Next') %></strong>
-            <% var title = truncate(page.prev.title , {length:60}) %> 
-            <span class="post-nav-title">
-              <%= title ||  __('Untitled') %>
-            </span>
-        </a>
-    <% } %>
-  </div>
-
-</nav>
-<% } %>
+</div>

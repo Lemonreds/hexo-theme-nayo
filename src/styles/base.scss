@@ -1,0 +1,45 @@
+::selection {
+    background: #EBEBEB
+}
+
+.container {
+    width: 860px;
+    min-height: 60vh;
+    margin: 2.5rem auto;
+    color: #555;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+#toTop {
+    @extend .hoverReverse;
+    position: fixed;
+    opacity: 0;
+    z-index: 101;
+    bottom: 10%;
+    right: 2%;
+    padding: 2px 8px;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.04)
+}
