@@ -5,7 +5,6 @@ exports.init = () => {
 
     if (Util.isMobile()) return;
 
-
     const _ = {
         pages: ['home', 'archives', 'categories', 'tags', 'about'],
         acitveClass: 'menu-active',
@@ -21,7 +20,6 @@ exports.init = () => {
             break
         }
     }
-
 
     let activeItem = dom.query(_.prefixer.concat(_.activeCurrent))
     activeItem.addClass(_.acitveClass)
