@@ -32,10 +32,10 @@
         .links {
             margin-right: 1.5px;
             font-size: 1.3rem;
+            color: #101010;
             @extend .hoverReverse;
 
             .iconfont {
-                color: #101010;
                 font-size: inherit;
             }
         }
