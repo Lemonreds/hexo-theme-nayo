@@ -22,5 +22,10 @@ exports.init = () => {
     }
 
     let activeItem = dom.query(_.prefixer.concat(_.activeCurrent))
-    activeItem.addClass(_.acitveClass)
+
+    try {
+        activeItem.addClass(_.acitveClass)
+    } catch (err) {
+        dom.query(_.prefixer.concat('home')).addClass(_.acitveClass)
+    }
 }

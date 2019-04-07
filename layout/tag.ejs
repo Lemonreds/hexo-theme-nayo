@@ -1,9 +1,12 @@
 <section>
 
   <% var name =  __('Page.Tags') %>
-  <%- partial('_partial/page-name',{icon:'icon-page-tags',name: name }) %>
+  
 
   <% if( is_tag()){ %>
+
+  
+        <%- partial('_partial/page-name',{icon:'icon-page-tags',name: page.tag }) %>
 
         <div class="items">
             <% page.posts.each(function (post) { %>     
@@ -15,7 +18,8 @@
 
 
     <%} else {%>    
-    
+
+        <%- partial('_partial/page-name',{icon:'icon-page-tags',name: name }) %>
 
         <ul class="tag">
         <% site.tags.sort('date',-1).each( function (tag){%>

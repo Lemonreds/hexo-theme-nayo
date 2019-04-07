@@ -70,13 +70,13 @@
 
     }
 
-    .article-.excerpt {
-        margin: 1rem 0;
+    .article-excerpt {
+        margin: 2rem 0 1.5rem;
     }
-
-    .article-tags {
-
-        .tagLink {
+    .article-tags,
+    .article-categories {
+        display: inline-block;
+        .link {
             @extend .hover;
             margin-right: 6px;
             font-size: 0.85rem;
@@ -84,7 +84,7 @@
         }
 
         .iconfont {
-            color: #111;
+            color: #000;
         }
     }
 

@@ -1,0 +1,18 @@
+<section>
+
+
+  <% var name =  __('Page.Categories') %>
+
+  <% if( is_category()){ %>
+
+      <%- partial('_partial/page-name',{icon:'icon-category',name: page.category }) %>
+
+  	   <div class="items">
+          <% page.posts.each(function (post) { %>     
+
+            <%- partial('_partial/item',{post: post}) %>       
+
+          <% })%>
+      </div>	
+  <%}%>	    
+</section>

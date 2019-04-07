@@ -29,11 +29,23 @@
 		<%}%>  	  
 	</div>
 
+
+
+	<div class="article-categories">
+	 <% if( post.categories && post.categories.length) {%>
+      <i class="iconfont icon-category" style="margin-right:4px"></i>
+	  	<% post.categories.sort('date',-1).each(function (cate){%>            
+				<a class="link" href="<%- url_for(cate.path) %>"><%- cate.name %></a>           
+		<% })%>
+      <% }%>
+	</div>
+	
+
 	<div class="article-tags">
 		<%if(post.tags && post.tags.length){%>
 			<i class="iconfont icon-tags" style="margin-right:4px"></i>
 			<% post.tags.sort('date',-1).each(function (tag){%>            
-				<a class="tagLink" href="<%- url_for(tag.path) %>"><%- tag.name %></a>           
+				<a class="link" href="<%- url_for(tag.path) %>"><%- tag.name %></a>           
 			<% })%>
 		<%}%>
 	</div>
