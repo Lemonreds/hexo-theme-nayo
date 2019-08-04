@@ -30,13 +30,13 @@ favicon: /images/favicon.png
 # social link
 social:  
   Github: https://github.com/Lemonreds/hexo-theme-nayo 
-  Weibo: https://weibo.com/liminghong2
-  #Zhihu:
-  #Facebook:
-  #Twitter:
-  #Instagram:
-  #LinkedIn:
-  #Neteasemusic:
+  Weibo: 
+  # Zhihu:
+  # Facebook:
+  Twitter:
+  instagram:
+  # LinkedIn:
+  Neteasemusic:
   Telegram: /
 
 # site analytics 
