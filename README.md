@@ -17,10 +17,10 @@ $ git clone https://github.com/Lemonreds/hexo-theme-Nayo themes/nayo
 
 or download zip and rename Nayo into **yourblog/themes/**  
 
-2. Modify theme setting in yourblog/_config.yml to Nayo. 
+2. Modify theme setting in yourblog/_config.yml to nayo. 
 
 ```
-theme: Nayo
+theme: nayo
 ```
 
 ## Theme Name 
