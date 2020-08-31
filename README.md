@@ -1,37 +1,42 @@
 ## hexo-theme-nayo
 
-a concise theme for hexo.
+a concise theme for hexo[3.7.0].
 
-预览 [preview](https://lemonreds.github.io/) | 常见问题 [common issues](https://lemonreds.github.io/2018/10/01/hexo-theme-nayo/) 
+在线预览 [preview](https://lemonreds.github.io/) | 常见问题 [common issues](https://lemonreds.github.io/2018/10/01/hexo-theme-nayo/) 
 
-## Preview
+## 效果图
 
 ![Where is my image?](https://github.com/Lemonreds/hexo-theme-nayo/blob/master/src/nayo.png)
 
-## Installation 
+## 安装说明 
 
-1. Get Nayo from github 
+1. 从github上clone项目下来，放到目录  **yourhexoblog/themes/** 下。
 ```
 $ git clone https://github.com/Lemonreds/hexo-theme-Nayo themes/nayo
 ```
 
-or download zip and rename Nayo into **yourblog/themes/**  
+或者直接download下来重名为nayo，并放到目录  **yourhexoblog/themes/** 下。
 
-2. Modify theme setting in yourblog/_config.yml to nayo. 
+2.修改hexo的配置文件，**yourhexoblog/_config.yml** ，切换主题。
 
 ```
-theme: nayo
+theme: Nayo
 ```
 
-## Theme Name 
+## 关于主题名字 
 
 主题名来自歌曲 <东京不太热> -封茗囧菌
 
-## Modify theme 
+## 修改主题
 
-你可以手动修改主题，主题基于 webpack4.0、sass、ejs模版 开发。
+主题基于 hexoAPI、webpack4.0、Sass、Ejs 开发。
 
-修改ejs不需要安装依赖，修改js或css则需要：
+修改Ejs不需要安装依赖即可生效，修改js或css则需要webpack启动服务：
+
+0. 启动hexo，本地预览主题的修改。
+```
+hexo s
+```
 
 1. 安装Node依赖
 ```
